@@ -63,6 +63,10 @@ xaringanExtra::use_extra_styles(
 )
 ```
 
+```{r html output, eval=TRUE, include=FALSE}
+options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
+```
+
 ```{css, echo = F}
 .dk-section-title {
 box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
@@ -253,7 +257,7 @@ class: inverse
 ---
 
 class: dk-section-title
-background-image:url("imgs/trote.jpg")
+background-image: url("imgs/trote.jpg")
 background-size: cover
 
 # Syntax quirks and idiosyncrasies
