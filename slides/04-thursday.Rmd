@@ -1,0 +1,128 @@
+---
+title: "Getting the most out of R"
+subtitle: "Physalia Courses"  
+author: 
+  - "Luis D. Verde Arregoitia"
+date: 'February 2021'
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+library(fontawesome)
+library(gt)
+library(dplyr)
+library(tidyr)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF",
+  inverse_background_color = "#8d99ae",
+  base_font_size = "25px",
+  text_font_size=  "1.25rem",
+  link_decoration = "underline dotted red",
+  code_font_size = "1.25rem",
+  code_inline_color= "#003049",
+  code_inline_background_color = "#FFFCFE",
+  blockquote_left_border_color = "#003049"
+  )
+
+```
+
+```{r xaringan-tachyons, echo=FALSE}
+library(xaringanExtra)
+xaringanExtra::use_tachyons()
+```
+
+```{r xaringan-panelset, echo=FALSE, eval=TRUE}
+xaringanExtra::use_panelset()
+```
+
+```{r xaringan-animate-all, echo=FALSE, eval=TRUE}
+xaringanExtra::use_animate_all("fade")
+```
+
+```{r xaringan-extra-styles, eval=TRUE, echo=FALSE}
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,     
+)
+```
+
+```{css, echo = F}
+.dk-section-title {
+box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
+}
+
+.dk-section-title h1 {
+  color: #f3f3f3;
+  font-size: 100px;
+  line-height: 1;
+}
+
+```
+
+## Thursday - Overcoming errors and getting unstuck
+
+
+- Friendly online resources
+
+- Building web searches to solve common problems
+
+- Identifying the best solutions
+
+- Creating reproducible examples with the 📦 {`reprex`} package 
+
+---
+
+- Friendly online resources
+
+StackOverflow
+Twitter
+github issues (closed and open)
+RStudio Community
+
+
+---
+ Getting help
+ 
+---
+
+Etiquette
+
+
+---
+.center[
+<blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">If you are looking for help with an <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> problem, I recommend that you<br>🎯do *not* email an individual author or OSS maintainer<br>🎯create a reprex demonstrating your problem (naturally none in this email)<br>🎯post on a public forum like RStudio Community or Stack Overflow</p>&mdash; Julia Silge (@juliasilge) <a href="https://twitter.com/juliasilge/status/1477778836968259587?ref_src=twsrc%5Etfw">January 2, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+]
+
+--- 
+ Reproducible examples
+ 
+ 
+---
+- Building web searches to solve common problems
+
+- Identifying the best solutions
+
+- Creating reproducible examples with the 📦 {`reprex`} package 
