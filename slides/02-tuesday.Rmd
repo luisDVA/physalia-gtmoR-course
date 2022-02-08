@@ -108,7 +108,7 @@ Disambiguate `here`
 - see slides for Day 1 
 
 Loading data bundled with packages (and objects of type `promise`)
-- we will do this for the excercises
+- we will do this for the exercises
 ]
 
 ---
