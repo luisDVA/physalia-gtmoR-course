@@ -44,11 +44,11 @@ library(readr)
 library(dplyr)
 
 fishexp <- read_csv("data/gene_expression.csv")
-
-fishexp %>% pivot_longer(cols = c(2:4,6:8),names_to = "time",
+fishexp
+flong <- fishexp %>% pivot_longer(cols = c(2:4,6:8),names_to = "time",
                          values_to = "gene_expr")
 
-
+flong %>% pivot_wider(names_from = time,values_from = gene_expr)
 
 # Challenge Day 3
 library(dplyr)

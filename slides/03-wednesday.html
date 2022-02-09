@@ -6,6 +6,10 @@
     <meta name="author" content="Luis D. Verde Arregoitia" />
     <script src="03-wednesday_files/header-attrs/header-attrs.js"></script>
     <link href="03-wednesday_files/tachyons/tachyons.min.css" rel="stylesheet" />
+    <script src="03-wednesday_files/clipboard/clipboard.min.js"></script>
+    <link href="03-wednesday_files/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="03-wednesday_files/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
     <link href="03-wednesday_files/panelset/panelset.css" rel="stylesheet" />
     <script src="03-wednesday_files/panelset/panelset.js"></script>
     <link href="03-wednesday_files/animate.css-xaringan/animate.fade.css" rel="stylesheet" />
@@ -22,6 +26,7 @@ class: center, middle, inverse, title-slide
 ### February 2021
 
 ---
+
 
 
 
@@ -59,7 +64,6 @@ box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
 
 ## Wednesday - Increasing efficiency
 
-
 - Iteration, writing loops and using {`purrr`}
 
   - Apply functions to many things at once
@@ -68,7 +72,7 @@ box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
 
   - Modifying and exporting multiple objects
 
-- Useful addins and helpers
+- ~~Useful addins and helpers~~
 
 - Regular expressions for working with text strings 
 
@@ -192,12 +196,12 @@ https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.p
 head(msleep)
 ```
 
-<div id="iztzcaqloy" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="nmressaldj" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#iztzcaqloy .gt_table {
+#nmressaldj .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -222,7 +226,7 @@ head(msleep)
   border-left-color: #D3D3D3;
 }
 
-#iztzcaqloy .gt_heading {
+#nmressaldj .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -234,7 +238,7 @@ head(msleep)
   border-right-color: #D3D3D3;
 }
 
-#iztzcaqloy .gt_title {
+#nmressaldj .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -244,23 +248,23 @@ head(msleep)
   border-bottom-width: 0;
 }
 
-#iztzcaqloy .gt_subtitle {
+#nmressaldj .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
   padding-top: 0;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#iztzcaqloy .gt_bottom_border {
+#nmressaldj .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#iztzcaqloy .gt_col_headings {
+#nmressaldj .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -275,7 +279,7 @@ head(msleep)
   border-right-color: #D3D3D3;
 }
 
-#iztzcaqloy .gt_col_heading {
+#nmressaldj .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -295,7 +299,7 @@ head(msleep)
   overflow-x: hidden;
 }
 
-#iztzcaqloy .gt_column_spanner_outer {
+#nmressaldj .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -307,27 +311,27 @@ head(msleep)
   padding-right: 4px;
 }
 
-#iztzcaqloy .gt_column_spanner_outer:first-child {
+#nmressaldj .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#iztzcaqloy .gt_column_spanner_outer:last-child {
+#nmressaldj .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#iztzcaqloy .gt_column_spanner {
+#nmressaldj .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
   vertical-align: bottom;
   padding-top: 5px;
-  padding-bottom: 6px;
+  padding-bottom: 5px;
   overflow-x: hidden;
   display: inline-block;
   width: 100%;
 }
 
-#iztzcaqloy .gt_group_heading {
+#nmressaldj .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -349,7 +353,7 @@ head(msleep)
   vertical-align: middle;
 }
 
-#iztzcaqloy .gt_empty_group_heading {
+#nmressaldj .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -364,15 +368,15 @@ head(msleep)
   vertical-align: middle;
 }
 
-#iztzcaqloy .gt_from_md > :first-child {
+#nmressaldj .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#iztzcaqloy .gt_from_md > :last-child {
+#nmressaldj .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#iztzcaqloy .gt_row {
+#nmressaldj .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -391,7 +395,7 @@ head(msleep)
   overflow-x: hidden;
 }
 
-#iztzcaqloy .gt_stub {
+#nmressaldj .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -403,7 +407,7 @@ head(msleep)
   padding-left: 12px;
 }
 
-#iztzcaqloy .gt_summary_row {
+#nmressaldj .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -413,7 +417,7 @@ head(msleep)
   padding-right: 5px;
 }
 
-#iztzcaqloy .gt_first_summary_row {
+#nmressaldj .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -423,7 +427,7 @@ head(msleep)
   border-top-color: #D3D3D3;
 }
 
-#iztzcaqloy .gt_grand_summary_row {
+#nmressaldj .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -433,7 +437,7 @@ head(msleep)
   padding-right: 5px;
 }
 
-#iztzcaqloy .gt_first_grand_summary_row {
+#nmressaldj .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -443,11 +447,11 @@ head(msleep)
   border-top-color: #D3D3D3;
 }
 
-#iztzcaqloy .gt_striped {
+#nmressaldj .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#iztzcaqloy .gt_table_body {
+#nmressaldj .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -456,7 +460,7 @@ head(msleep)
   border-bottom-color: #D3D3D3;
 }
 
-#iztzcaqloy .gt_footnotes {
+#nmressaldj .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -470,13 +474,13 @@ head(msleep)
   border-right-color: #D3D3D3;
 }
 
-#iztzcaqloy .gt_footnote {
+#nmressaldj .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#iztzcaqloy .gt_sourcenotes {
+#nmressaldj .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -490,41 +494,41 @@ head(msleep)
   border-right-color: #D3D3D3;
 }
 
-#iztzcaqloy .gt_sourcenote {
+#nmressaldj .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#iztzcaqloy .gt_left {
+#nmressaldj .gt_left {
   text-align: left;
 }
 
-#iztzcaqloy .gt_center {
+#nmressaldj .gt_center {
   text-align: center;
 }
 
-#iztzcaqloy .gt_right {
+#nmressaldj .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#iztzcaqloy .gt_font_normal {
+#nmressaldj .gt_font_normal {
   font-weight: normal;
 }
 
-#iztzcaqloy .gt_font_bold {
+#nmressaldj .gt_font_bold {
   font-weight: bold;
 }
 
-#iztzcaqloy .gt_font_italic {
+#nmressaldj .gt_font_italic {
   font-style: italic;
 }
 
-#iztzcaqloy .gt_super {
+#nmressaldj .gt_super {
   font-size: 65%;
 }
 
-#iztzcaqloy .gt_footnote_marks {
+#nmressaldj .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -634,25 +638,27 @@ msleep %&gt;% group_by(order) %&gt;% slice_max(brainwt,n=1)
 ```
 ## # A tibble: 17 × 11
 ## # Groups:   order [17]
-##    name   genus  vore  order conservation sleep_total sleep_rem sleep_cycle awake brainwt  bodywt
-##    &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;              &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
-##  1 Tenrec Tenrec omni  Afro… &lt;NA&gt;                15.6       2.3      NA       8.4  0.0026 9   e-1
-##  2 Cow    Bos    herbi Arti… domesticated         4         0.7       0.667  20    0.423  6   e+2
-##  3 Gray … Halio… carni Carn… lc                   6.2       1.5      NA      17.8  0.325  8.5 e+1
-##  4 Big b… Eptes… inse… Chir… lc                  19.7       3.9       0.117   4.3  0.0003 2.3 e-2
-##  5 Giant… Priod… inse… Cing… en                  18.1       6.1      NA       5.9  0.081  6   e+1
-##  6 North… Didel… omni  Dide… lc                  18         4.9       0.333   6    0.0063 1.7 e+0
-##  7 Phala… Phala… &lt;NA&gt;  Dipr… &lt;NA&gt;                13.7       1.8      NA      10.3  0.0114 1.62e+0
-##  8 Europ… Erina… omni  Erin… lc                  10.1       3.5       0.283  13.9  0.0035 7.7 e-1
-##  9 Rock … Proca… &lt;NA&gt;  Hyra… lc                   5.4       0.5      NA      18.6  0.021  3.6 e+0
-## 10 Rabbit Oryct… herbi Lago… domesticated         8.4       0.9       0.417  15.6  0.0121 2.5 e+0
-## 11 Short… Tachy… inse… Mono… &lt;NA&gt;                 8.6      NA        NA      15.4  0.025  4.5 e+0
-## 12 Horse  Equus  herbi Peri… domesticated         2.9       0.6       1      21.1  0.655  5.21e+2
-## 13 Human  Homo   omni  Prim… &lt;NA&gt;                 8         1.9       1.5    16    1.32   6.2 e+1
-## 14 Afric… Loxod… herbi Prob… vu                   3.3      NA        NA      20.7  5.71   6.65e+3
-## 15 Afric… Crice… omni  Rode… &lt;NA&gt;                 8.3       2        NA      15.7  0.0066 1   e+0
-## 16 Tree … Tupaia omni  Scan… &lt;NA&gt;                 8.9       2.6       0.233  15.1  0.0025 1.04e-1
-## 17 Easte… Scalo… inse… Sori… lc                   8.4       2.1       0.167  15.6  0.0012 7.5 e-2
+##    name       genus   vore  order   conservation sleep_total sleep_rem
+##    &lt;chr&gt;      &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;              &lt;dbl&gt;     &lt;dbl&gt;
+##  1 Tenrec     Tenrec  omni  Afroso… &lt;NA&gt;                15.6       2.3
+##  2 Cow        Bos     herbi Artiod… domesticated         4         0.7
+##  3 Gray seal  Halioc… carni Carniv… lc                   6.2       1.5
+##  4 Big brown… Eptesi… inse… Chirop… lc                  19.7       3.9
+##  5 Giant arm… Priodo… inse… Cingul… en                  18.1       6.1
+##  6 North Ame… Didelp… omni  Didelp… lc                  18         4.9
+##  7 Phalanger  Phalan… &lt;NA&gt;  Diprot… &lt;NA&gt;                13.7       1.8
+##  8 European … Erinac… omni  Erinac… lc                  10.1       3.5
+##  9 Rock hyrax Procav… &lt;NA&gt;  Hyraco… lc                   5.4       0.5
+## 10 Rabbit     Orycto… herbi Lagomo… domesticated         8.4       0.9
+## 11 Short-nos… Tachyg… inse… Monotr… &lt;NA&gt;                 8.6      NA  
+## 12 Horse      Equus   herbi Periss… domesticated         2.9       0.6
+## 13 Human      Homo    omni  Primat… &lt;NA&gt;                 8         1.9
+## 14 African e… Loxodo… herbi Probos… vu                   3.3      NA  
+## 15 African g… Cricet… omni  Rodent… &lt;NA&gt;                 8.3       2  
+## 16 Tree shrew Tupaia  omni  Scande… &lt;NA&gt;                 8.9       2.6
+## 17 Eastern a… Scalop… inse… Sorico… lc                   8.4       2.1
+## # … with 4 more variables: sleep_cycle &lt;dbl&gt;, awake &lt;dbl&gt;,
+## #   brainwt &lt;dbl&gt;, bodywt &lt;dbl&gt;
 ```
 ]
 
@@ -669,33 +675,73 @@ msleep %&gt;% group_by(order) %&gt;% slice_sample(n=1)
 ```
 ## # A tibble: 19 × 11
 ## # Groups:   order [19]
-##    name   genus vore  order conservation sleep_total sleep_rem sleep_cycle awake  brainwt  bodywt
-##    &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;              &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;
-##  1 Tenrec Tenr… omni  Afro… &lt;NA&gt;                15.6       2.3      NA       8.4  0.0026  9   e-1
-##  2 Cow    Bos   herbi Arti… domesticated         4         0.7       0.667  20    0.423   6   e+2
-##  3 Jaguar Pant… carni Carn… nt                  10.4      NA        NA      13.6  0.157   1   e+2
-##  4 Commo… Phoc… carni Ceta… vu                   5.6      NA        NA      18.4 NA       5.32e+1
-##  5 Littl… Myot… inse… Chir… &lt;NA&gt;                19.9       2         0.2     4.1  0.00025 1   e-2
-##  6 Giant… Prio… inse… Cing… en                  18.1       6.1      NA       5.9  0.081   6   e+1
-##  7 Thick… Lutr… carni Dide… lc                  19.4       6.6      NA       4.6 NA       3.7 e-1
-##  8 Potor… Poto… herbi Dipr… &lt;NA&gt;                11.1       1.5      NA      12.9 NA       1.1 e+0
-##  9 Europ… Erin… omni  Erin… lc                  10.1       3.5       0.283  13.9  0.0035  7.7 e-1
-## 10 Gray … Hete… herbi Hyra… lc                   6.3       0.6      NA      17.7  0.0123  2.62e+0
-## 11 Rabbit Oryc… herbi Lago… domesticated         8.4       0.9       0.417  15.6  0.0121  2.5 e+0
-## 12 Short… Tach… inse… Mono… &lt;NA&gt;                 8.6      NA        NA      15.4  0.025   4.5 e+0
-## 13 Donkey Equus herbi Peri… domesticated         3.1       0.4      NA      20.9  0.419   1.87e+2
-## 14 Three… Brad… herbi Pilo… &lt;NA&gt;                14.4       2.2       0.767   9.6 NA       3.85e+0
-## 15 Galago Gala… omni  Prim… &lt;NA&gt;                 9.8       1.1       0.55   14.2  0.005   2   e-1
-## 16 Asian… Elep… herbi Prob… en                   3.9      NA        NA      20.1  4.60    2.55e+3
-## 17 Degu   Octo… herbi Rode… lc                   7.7       0.9      NA      16.3 NA       2.1 e-1
-## 18 Tree … Tupa… omni  Scan… &lt;NA&gt;                 8.9       2.6       0.233  15.1  0.0025  1.04e-1
-## 19 Lesse… Cryp… omni  Sori… lc                   9.1       1.4       0.15   14.9  0.00014 5   e-3
+##    name       genus   vore  order   conservation sleep_total sleep_rem
+##    &lt;chr&gt;      &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;              &lt;dbl&gt;     &lt;dbl&gt;
+##  1 Tenrec     Tenrec  omni  Afroso… &lt;NA&gt;                15.6       2.3
+##  2 Cow        Bos     herbi Artiod… domesticated         4         0.7
+##  3 Domestic … Felis   carni Carniv… domesticated        12.5       3.2
+##  4 Bottle-no… Tursio… carni Cetacea &lt;NA&gt;                 5.2      NA  
+##  5 Little br… Myotis  inse… Chirop… &lt;NA&gt;                19.9       2  
+##  6 Giant arm… Priodo… inse… Cingul… en                  18.1       6.1
+##  7 North Ame… Didelp… omni  Didelp… lc                  18         4.9
+##  8 Phalanger  Phalan… &lt;NA&gt;  Diprot… &lt;NA&gt;                13.7       1.8
+##  9 Desert he… Paraec… &lt;NA&gt;  Erinac… lc                  10.3       2.7
+## 10 Gray hyrax Hetero… herbi Hyraco… lc                   6.3       0.6
+## 11 Rabbit     Orycto… herbi Lagomo… domesticated         8.4       0.9
+## 12 Short-nos… Tachyg… inse… Monotr… &lt;NA&gt;                 8.6      NA  
+## 13 Brazilian… Tapirus herbi Periss… vu                   4.4       1  
+## 14 Three-toe… Bradyp… herbi Pilosa  &lt;NA&gt;                14.4       2.2
+## 15 Mongoose … Lemur   herbi Primat… vu                   9.5       0.9
+## 16 Asian ele… Elephas herbi Probos… en                   3.9      NA  
+## 17 African g… Cricet… omni  Rodent… &lt;NA&gt;                 8.3       2  
+## 18 Tree shrew Tupaia  omni  Scande… &lt;NA&gt;                 8.9       2.6
+## 19 Eastern a… Scalop… inse… Sorico… lc                   8.4       2.1
+## # … with 4 more variables: sleep_cycle &lt;dbl&gt;, awake &lt;dbl&gt;,
+## #   brainwt &lt;dbl&gt;, bodywt &lt;dbl&gt;
 ```
+]
 
+---
+.f3.b.blue[summarize]
+
+```r
+msleep %&gt;% group_by(order) %&gt;% 
+  summarize(mean_slp = mean(sleep_total),
+            mean_brainwt=mean(brainwt))
+```
+.center[
+.tinycode[
+
+```
+## # A tibble: 19 × 3
+##    order           mean_slp mean_brainwt
+##    &lt;chr&gt;              &lt;dbl&gt;        &lt;dbl&gt;
+##  1 Afrosoricida       15.6      0.0026  
+##  2 Artiodactyla        4.52    NA       
+##  3 Carnivora          10.1     NA       
+##  4 Cetacea             4.5     NA       
+##  5 Chiroptera         19.8      0.000275
+##  6 Cingulata          17.8      0.0459  
+##  7 Didelphimorphia    18.7     NA       
+##  8 Diprotodontia      12.4     NA       
+##  9 Erinaceomorpha     10.2      0.00295 
+## 10 Hyracoidea          5.67     0.0152  
+## 11 Lagomorpha          8.4      0.0121  
+## 12 Monotremata         8.6      0.025   
+## 13 Perissodactyla      3.47     0.414   
+## 14 Pilosa             14.4     NA       
+## 15 Primates           10.5     NA       
+## 16 Proboscidea         3.6      5.16    
+## 17 Rodentia           12.5     NA       
+## 18 Scandentia          8.9      0.0025  
+## 19 Soricomorpha       11.1      0.000592
+```
+]
 ]
 ---
 
 # Loops are fine
+
 .f3[(and most of the time you don't have to write them yourselves anyway)]
 
 .left-column[
@@ -756,6 +802,7 @@ msleep %&gt;%
                         ## (sample element at random)
 ```
 
+.f3[Similar to loops but we keep everything inside the data frame]
 
 ---
 
@@ -773,7 +820,8 @@ x &gt; 5
 
 ---
 
-### Logical operators are vectorized
+### Logical operators are vectorized (many other fns too!)
+
 
 ```r
 x &lt;- c(1,3,12,4,7,8)
@@ -787,12 +835,9 @@ x &gt; 5
 We don't need to type all of this out or a loop
 
 ```r
-x[1]&gt;5
-x[2]&gt;5
-x[3]&gt;5
-x[4]&gt;5
-x[5]&gt;5
-x[6]&gt;5
+x[1]&gt;5 ; x[2]&gt;5
+x[3]&gt;5 ; x[4]&gt;5
+x[5]&gt;5 ; x[6]&gt;5
 ```
 
 ---
@@ -813,7 +858,7 @@ x[6]&gt;5
 📦 **`purrr`** - Functional programming tools
 
 - map functions to data  
-- work efficiently with lists
+- work efficiently with **lists**
 - readable code
 ]
 ]
@@ -842,6 +887,7 @@ apply .b.green.code[.f]
 ---
 
 ## Mapping functions to data
+.center[`map(.x,.f)`]
 
 .f2[We can specify .green.b.code[.f] as:]
 
@@ -894,7 +940,6 @@ my_custom_function(my_arg = my_vector)
 
 
 ---
-class: middle
 
 .f3[The body of the function –the statements that are executed when it runs– is grouped with curly braces   (`{}`)]
 
@@ -903,6 +948,12 @@ class: middle
 f &lt;- function(x) {
   x + 4 # statement
 }
+```
+
+.left-column[
+.smallercode[
+
+```r
 f(6)
 ```
 
@@ -910,14 +961,26 @@ f(6)
 ## [1] 10
 ```
 
+```r
+f(x=6)
+```
+
+```
+## [1] 10
+```
+]]
+
+.right-column[
+Writing the names of arguments in a function call is optional, but for functions with &gt;1 arguments the order of the argument values matters]
+
 ---
 
-.f3[We don't need curly braces for functions with only one statement]
+.f3[**But** we _don't_ need curly braces for functions with only one statement]
 
 
 ```r
 f &lt;- function(x) x+4   
-f(6)
+f(x=6)
 ```
 
 ```
@@ -939,15 +1002,15 @@ f(c(6,43,12,5,7))
 .f3[Enclose multi-statement function bodies in curly braces]
 
 ```r
-f &lt;- function(x)  y &lt;- (x*0.2885) y # WILL THROW ERROR  
+f &lt;- function(x)  y &lt;- (x*0.2885) log(y) # WON'T RUN  
 ```
 
 .f3[Works, note the statements in separate lines]
 
 ```r
 f &lt;- function(x) {
-  y &lt;- (x*0.2885) 
-  log(y)    
+  y &lt;- (x*0.2885) # this is a statement
+  log(y)          # this is another statement
 }
 
 f(5)
@@ -967,12 +1030,14 @@ f(5)
 ### Anonymous function syntax
 
 ```r
-(function(x) x + 3)(10)
+(function(x) x * x + 3)(10)
 ```
 
 ```
-## [1] 13
+## [1] 103
 ```
+
+the function definition in anonymous functions needs to be wrapped in parentheses to separate function and arguments
 
 ---
 
@@ -1019,6 +1084,25 @@ f(10)
 
 ---
 
+## Why write our own functions
+
+.f3[
+- Avoids repetition
+
+- Brevity
+
+- Less room for errors
+
+- Take advantage of tools that help us apply functions to many things at once
+]
+
+.tr[
+Jenny Bryan - Stat545  
+[Write your own R functions](https://stat545.com/functions-part1.html)
+]
+
+---
+
 # Lists
 
 .f3[Objects which contain elements of different types, such as numbers, strings, vectors, data frames, or even other lists]
@@ -1059,7 +1143,13 @@ my_list
 ```
 
 ---
-&lt;img src="imgs/listpepper.png" width="36%" /&gt;   
+
+## List indexing
+.center[
+&lt;img src="imgs/listspepper.png" width="76%" /&gt;   
+]
+Hadley Wickam (2015) on [Twitter](https://twitter.com/hadleywickham/status/643381054758363136?s=20&amp;t=0Gu4Qs757o5KHEJR2ZwkEg)
+
 ---
 
 .f3[We can also create lists by splitting other objects]
@@ -1085,6 +1175,8 @@ class(cars_country)
 ```
 
 ---
+
+.f3[`group_keys()` retrieves the grouping data]
 
 
 ```r
@@ -1125,96 +1217,340 @@ cars_country[[1]] %&gt;%
 
 ---
 
+
+```r
+cars_country[[2]] %&gt;% 
+  select(model,ctry_origin, hp, msrp) %&gt;% 
+  head
+```
+
+```
+## # A tibble: 6 × 4
+##   model        ctry_origin    hp   msrp
+##   &lt;chr&gt;        &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;
+## 1 458 Speciale Italy         597 291744
+## 2 458 Spider   Italy         562 263553
+## 3 458 Italia   Italy         562 233509
+## 4 488 GTB      Italy         661 245400
+## 5 California   Italy         553 198973
+## 6 GTC4Lusso    Italy         680 298000
+```
+
+---
+
+.center[
+&lt;img src="imgs/purrrPost.png" /&gt;   
+]
+Luis (2017)
+Export Iteratively  
+https://luisdva.github.io/rstats/export-iteratively/
+
+---
+
+# Why lists?
+
+- Flexible, can store many kinds of objects
+
+- We can easily create lists by splitting existing objects
+
+- List elements can be named 
+
+---
+
 ## Mapping functions to data 
 
-.f3[We can specify .green.b.code[.f] as:
-- an existing function  
+- Apply functions to many things at once
+
+- Reading many files at once
+
+- Modifying and exporting multiple objects
+
+---
+
+### Apply functions to many things at once
+
+```r
+library(openintro)
+library(purrr)
+data("starbucks")
+# create three vectors (numeric)
+fat &lt;- starbucks$fat
+carb &lt;- starbucks$carb
+protein &lt;- starbucks$protein
+# put them in a list
+nutrients &lt;- list(fat,carb,protein)
+# apply the mean function to each list element
+map(nutrients,mean)
+```
+
+---
+
+### Apply (custom) functions to many things at once 
+
+
+```r
+# fn that gets min, max, and range
+
+getMinMaxRange &lt;- function(x){
+  min_x &lt;- min(x)
+  max_x &lt;- max(x)
+  maxmin &lt;- max_x - min_x
+  c(min_x, max_x, maxmin)
+}
+```
+
+---
+
+### Check that the function works for vectors
+
+
+
+
+```r
+getMinMaxRange(protein)
+```
+
+```
+## [1]  0 34 34
+```
+
+```r
+getMinMaxRange(carb)
+```
+
+```
+## [1] 16 80 64
+```
+
+```r
+getMinMaxRange(fat)
+```
+
+```
+## [1]  0 28 28
+```
+
+
+---
+
+### Use `map()` to apply the fn to all the list elements
+
+
+```r
+map(.x = nutrients, .f = getMinMaxRange)
+```
+
+```
+## [[1]]
+## [1]  0 28 28
+## 
+## [[2]]
+## [1] 16 80 64
+## 
+## [[3]]
+## [1]  0 34 34
+```
+
+---
+
+## Type-specific `map()` 
+.f3[
+`map()` always returns lists  
+
+`map_lgl()` returns a logical  
+
+`map_int()` returns an integer vector  
+
+`map_dbl()` returns a double vector
+
+`map_chr()` returns a character vector
+
+`map_df()` returns a data frame
+]
+
+---
+
+
+```r
+map(nutrients, median)
+```
+
+```
+## [[1]]
+## [1] 13
+## 
+## [[2]]
+## [1] 45
+## 
+## [[3]]
+## [1] 7
+```
+
+```r
+map_dbl(nutrients, median)
+```
+
+```
+## [1] 13 45  7
+```
+---
+
+## What about anonymous functions and formulas?
+
+.f3[Once we know how to define new functions, we can write anonymous functions to express what we want to do if we only need to do it once.]
+
+
+
+.tr[Anonymous Functions in R - Part 1  
+https://coolbutuseless.github.io/2019/03/13/anonymous-functions-in-r-part-1/]
+
+---
+
+## Anonymous functions and formulas
+
+Same behavior
+
+```r
+numlist &lt;- list(c(5:10),c(20:27))
+# anonymous function
+map(numlist, function(x) x+2)
+# formula notation
+map(numlist, ~ .x + 2)
+```
+
+---
+
+.f2[In formula shorthand notation (defined with `~`) 
+.b.code.red[.x] always refers to the element of the vector or list we are iterating on]
+
+.f2[Behind the scenes .b.red[`~.x + 4`] becomes .b.red[`function(x) x+4`]]
+
+---
+
+# Reading or writing many files at once
+
+.center.f2[`map(.x,.f)`]
+
+.f2.red.b[`.x`] .f2[can be a list or vector of file paths]
+
+.f2.green.b[`.f`] .f2[can be a function that reads or writes files]
+
+
+---
+
+class: inverse
+
+### Let's create a directory full of text files
+
+.f3.white[
+- load `openintro` and make the `nba_players_19` data available
+
+- group the data by `team` then use `group_split()` to create a list of data frames, one for each team
+
+- create a vector of team names
+]
+
+&gt; 😲 We can iterate over two inputs simultaneously
+
+---
+
+# Mapping w/ two inputs
+
+.center.f2[`map2(.x, .y., .f)`]
+
+.f3[Both input lists or vectors are passed to function .b[.f]]
+
+.pull-left[
+&lt;img align="middle" src="imgs/map2.png" width="87%" /&gt;    
+]
+.pull-right[
+Altman et al. (2021)  
+[Map with multiple inputs](https://dcl-prog.stanford.edu/purrr-parallel.html)
+ ]
+ 
+---
+
+class: inverse
+## Creating a directory full of text files
+
+.f3.white[
+- Create the folder "nbateams" inside your "Data" folder
+
+- Use `here()` to build file (safe and portable) paths for each team in the vector of team names
+
+- Feed the list of data frames and the vector of file paths to `readr::write_csv`
+ ]
+
+.center[🔥🏀🔥]
+
+---
+class: inverse
+## Reading many files at once
+
+.f3.white[
+- use `dir_ls()` to create a vector with the paths for your newly created csv files
+
+- read each element of this vector with `map()` and `readr::read_csv()`
+
+- BONUS CHALLENGE: type-specific mapping (putting everything into a data frame) will throw an error here. Why?
 ]
 
 
-
-
----
-
-class: dk-section-title
-background-image:url("imgs/brigalow.jpg")
-background-size: cover
-
-# Useful addins and helpers
-
----
-
-- styler
-- annotater
-- littleboxes
-- packup
-- datapasta
-- regexplain
-- code sections
-- multiple cursors
-- shortcuts
-
-https://bookdown.org/content/d1e53ac9-28ce-472f-bc2c-f499f18264a3/code.html
 ---
 class: dk-section-title
 background-image:url("imgs/peru.jpg")
 background-size: cover
 
-# Regular Expressions
+# Regular expressions and working with strings
 
 ---
 
----
 # What are Regular Expressions?
 
-???
+- Also abbreviated as regex, R.E., or regexp (singular)  
 
-Having discussed data cleaning, tidy data, and data structures, now is a good time to learn about a tool that will come in handy when cleaning data, regardless of its structure or format and at every single stage of the process. So, in this lesson well be looking at regular expressions. 
-
-Regular expressions, which are generally abbreviated as regex, R.E., or regexp, provide us with a concise language for describing patterns of text. 
-
----
-
-class: middle
+- A concise language for describing patterns of text 
 
 ## Specially encoded 🧶.helvetica[_strings_] of characters that match patterns in other text strings 
 
-???
 
-To be precise, regular expressions are specially encoded text strings that match patterns in other strings. Regex has its own terminologies and syntax. In practice, it is a computer language in its own right, and it is usually bundled within many popular, programming languages. 
+---
 
-A regular expression matches a text pattern, It is input as a text string itself, and will compile into a mini program built specifically to identify that pattern. That pattern can be used to match, search, replace, or split text. 
+## Regular expressions
 
+.f3[
+In practice, a computer language with its own terminologies and syntax
+
+- Input as a text string that compiles into a mini program built specifically to identify a pattern. 
+
+- Can be used to match, search, replace, or split text 
+]
 ---
 
 ## 🧶Strings
 
 .f3[
 A collection of characters that make up one element of a vector:
+]
+
 
 ```r
 test_string &lt;- "This sentence is a string."
 ```
-]
 
-???
 
-In the context of R and for this course, string is a casual term that refers to a collection of characters that make up one element of a character vector. Formally, the object class that holds character strings in R is "character". Strings are enclosed in quotation marks. 
 
---
 
 .f3[
 We can store multiple strings in a character vector:
+]
 
 
 ```r
-pets &lt;-  c("dog","cat","parrot")
+pets &lt;-  c("dogs","cat","parrot","pig")
 ```
-]
 
-???
 
-See how we can assign one or more strings to objects of class character.
 
 ---
 
@@ -1226,12 +1562,12 @@ See how we can assign one or more strings to objects of class character.
 
 
 .pull-right[
-<div id="wafkudqsft" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="eeyhoummza" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#wafkudqsft .gt_table {
+#eeyhoummza .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1256,7 +1592,7 @@ See how we can assign one or more strings to objects of class character.
   border-left-color: #D3D3D3;
 }
 
-#wafkudqsft .gt_heading {
+#eeyhoummza .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1268,7 +1604,7 @@ See how we can assign one or more strings to objects of class character.
   border-right-color: #D3D3D3;
 }
 
-#wafkudqsft .gt_title {
+#eeyhoummza .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1278,23 +1614,23 @@ See how we can assign one or more strings to objects of class character.
   border-bottom-width: 0;
 }
 
-#wafkudqsft .gt_subtitle {
+#eeyhoummza .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
   padding-top: 0;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#wafkudqsft .gt_bottom_border {
+#eeyhoummza .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wafkudqsft .gt_col_headings {
+#eeyhoummza .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1309,9 +1645,9 @@ See how we can assign one or more strings to objects of class character.
   border-right-color: #D3D3D3;
 }
 
-#wafkudqsft .gt_col_heading {
+#eeyhoummza .gt_col_heading {
   color: #333333;
-  background-color: yellow;
+  background-color: #FFFF00;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
@@ -1329,9 +1665,9 @@ See how we can assign one or more strings to objects of class character.
   overflow-x: hidden;
 }
 
-#wafkudqsft .gt_column_spanner_outer {
+#eeyhoummza .gt_column_spanner_outer {
   color: #333333;
-  background-color: yellow;
+  background-color: #FFFF00;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
@@ -1341,27 +1677,27 @@ See how we can assign one or more strings to objects of class character.
   padding-right: 4px;
 }
 
-#wafkudqsft .gt_column_spanner_outer:first-child {
+#eeyhoummza .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wafkudqsft .gt_column_spanner_outer:last-child {
+#eeyhoummza .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wafkudqsft .gt_column_spanner {
+#eeyhoummza .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
   vertical-align: bottom;
   padding-top: 5px;
-  padding-bottom: 6px;
+  padding-bottom: 5px;
   overflow-x: hidden;
   display: inline-block;
   width: 100%;
 }
 
-#wafkudqsft .gt_group_heading {
+#eeyhoummza .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1383,7 +1719,7 @@ See how we can assign one or more strings to objects of class character.
   vertical-align: middle;
 }
 
-#wafkudqsft .gt_empty_group_heading {
+#eeyhoummza .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1398,15 +1734,15 @@ See how we can assign one or more strings to objects of class character.
   vertical-align: middle;
 }
 
-#wafkudqsft .gt_from_md > :first-child {
+#eeyhoummza .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wafkudqsft .gt_from_md > :last-child {
+#eeyhoummza .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wafkudqsft .gt_row {
+#eeyhoummza .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1425,7 +1761,7 @@ See how we can assign one or more strings to objects of class character.
   overflow-x: hidden;
 }
 
-#wafkudqsft .gt_stub {
+#eeyhoummza .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1437,7 +1773,7 @@ See how we can assign one or more strings to objects of class character.
   padding-left: 12px;
 }
 
-#wafkudqsft .gt_summary_row {
+#eeyhoummza .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1447,7 +1783,7 @@ See how we can assign one or more strings to objects of class character.
   padding-right: 5px;
 }
 
-#wafkudqsft .gt_first_summary_row {
+#eeyhoummza .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1457,7 +1793,7 @@ See how we can assign one or more strings to objects of class character.
   border-top-color: #D3D3D3;
 }
 
-#wafkudqsft .gt_grand_summary_row {
+#eeyhoummza .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1467,7 +1803,7 @@ See how we can assign one or more strings to objects of class character.
   padding-right: 5px;
 }
 
-#wafkudqsft .gt_first_grand_summary_row {
+#eeyhoummza .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1477,11 +1813,11 @@ See how we can assign one or more strings to objects of class character.
   border-top-color: #D3D3D3;
 }
 
-#wafkudqsft .gt_striped {
+#eeyhoummza .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wafkudqsft .gt_table_body {
+#eeyhoummza .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1490,7 +1826,7 @@ See how we can assign one or more strings to objects of class character.
   border-bottom-color: #D3D3D3;
 }
 
-#wafkudqsft .gt_footnotes {
+#eeyhoummza .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1504,13 +1840,13 @@ See how we can assign one or more strings to objects of class character.
   border-right-color: #D3D3D3;
 }
 
-#wafkudqsft .gt_footnote {
+#eeyhoummza .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#wafkudqsft .gt_sourcenotes {
+#eeyhoummza .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1524,41 +1860,41 @@ See how we can assign one or more strings to objects of class character.
   border-right-color: #D3D3D3;
 }
 
-#wafkudqsft .gt_sourcenote {
+#eeyhoummza .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#wafkudqsft .gt_left {
+#eeyhoummza .gt_left {
   text-align: left;
 }
 
-#wafkudqsft .gt_center {
+#eeyhoummza .gt_center {
   text-align: center;
 }
 
-#wafkudqsft .gt_right {
+#eeyhoummza .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wafkudqsft .gt_font_normal {
+#eeyhoummza .gt_font_normal {
   font-weight: normal;
 }
 
-#wafkudqsft .gt_font_bold {
+#eeyhoummza .gt_font_bold {
   font-weight: bold;
 }
 
-#wafkudqsft .gt_font_italic {
+#eeyhoummza .gt_font_italic {
   font-style: italic;
 }
 
-#wafkudqsft .gt_super {
+#eeyhoummza .gt_super {
   font-size: 65%;
 }
 
-#wafkudqsft .gt_footnote_marks {
+#eeyhoummza .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -1586,9 +1922,9 @@ See how we can assign one or more strings to objects of class character.
 </div>
 ]
 
-???
 
-We need to be aware of this, because non-numeric values inside any rectangular R object with rows and columns (such as Data Frames, Tibbles, or Data Tables) are also strings, this includes variable names and list names, which are also always strings.
+&lt;br/&gt;
+&gt; Remember how we matched patterns in column names when working with `select()` and the `matches()` selection helper
 
 ---
 
@@ -1599,32 +1935,24 @@ Uppercase and lowercase letters are treated as distinct
 
 
 ```r
-"cat"=="cat"
+"rat"=="rat"
 ```
 
 ```
 ## [1] TRUE
 ```
 
-???
 
-Like most UNIX based languages, R is case sensitive. This means that uppercase and lowercase letters are treated as distinct. 
-
---
 
 
 ```r
-"cat"=="CAT"
+"rat"=="rAT"
 ```
 
 ```
 ## [1] FALSE
 ```
 
-???
-
-To R, uppercase A and lowercase a are different symbols
-cat in all lower case is not equal to CAT in upper case
 
 ---
 
@@ -1632,112 +1960,26 @@ cat in all lower case is not equal to CAT in upper case
 
 Our options:   
 
-???
-
-We care about this because by default, regex searches are case sensitive, so we need to be aware of lettercase when building regular expressions.
-
-This is not an issue, because depending on what we need to accomplish, we can either 
-
---
-
+.f3[
 - Build case-insensitive regular expressions  
 
-???
+- Turn off case sensitivity in the matching, 
 
-build case insensitivity into our regular expressions, 
-
---
-
-- Change the matching to be case insensitive  
-
-???
-
-turn off case sensitivity in the matching, 
-
---
-
-- Coerce the input before matching
-
-???
-
-or modify the input text before matching. 
+- Modify the input text before matching. 
+]
 
 ---
-
-## Regex searches are case sensitive by default
-
-Our options:   
-
-
-.b.f3[
-- Build case-insensitive regular expressions  
-
-
-- Change the matching to be case insensitive  ]
-
-
-- .gray[Coerce the input before matching]
-
-???
-
-Of these options the first two are more advisable, because they save us steps and because once we learn the basics of regular expressions we can easily recognize case insensitivity.
-
----
-
-class: center, middle
-
 ## Why Learn Regular Expressions?
-
-???
-
-Learning to write regular expressions is an underutilized, valuable skill. Regex provides us with a widely applicable and flexible tool for describing patterns in text strings, which can which can be very general or quite specific, and ultimately save us a lot of time when we need to match, extract, or transform text by matching words, characters, and patterns.
-
-The syntax can look confusing at first, but like with the signs at airports or train stations, once we become familiar with the basics, we can get around even when we arrive somewhere we’ve never been, and in this context, when we come across regular expressions we haven’t seen before. 
-
---
-
-.xl[🕰]
-
-.f3[Cleaning text can be **time-consuming** and the first hurdle to address when working with less-than-perfect data.]
-
-???
-
-Cleaning text is often the first major obstacle we have when working with less-than-perfect data.   
-
----
-
-class: center, middle
-
-## Why Learn Regular Expressions?
-
-.xl[💻]
-
-.f3[      
-Regular expressions can often **replace dozens of lines of code.**] 
-
-???
-
-Also, one well-written regular expression can often replace dozens of lines of programming code.
-
----
 
 .f3[
-Regex is **not specific to any particular programming language or command-line tool.**]
+- Writing regular expressions &lt;- underutilized, valuable skill 
 
-???
+- Save  time when we need to match, extract, or transform text by matching words, characters, and patterns
 
-And, regular expressions are not specific to any particular programming language or command-line tool. We only need to learn this once.
+- Regular expressions can often **replace dozens of lines of code**
 
----
-
-class: center, middle, dk-section-title
-background-image:url("images/jorge-balleza-vtvwNNjYBz4-unsplash.jpg")
-background-size: cover
-# Understanding and Testing Regular Expressions
-
-???
-
-Lets get Started. Ill walk through some examples and explain how we can understand what’s happening when we use regex.
+- Not specific to any particular programming language or command-line tool
+]
 
 ---
 
@@ -1759,21 +2001,11 @@ Lets get Started. Ill walk through some examples and explain how we can understa
 ]
 &lt;/br&gt;
 
-???
-
-There are two things we always need when we use regular expressions.  We provide an input string that may contain the pattern we’re interested in, and a regular expression to describe this pattern. 
-
-
-Behind the scenes, the matching is done by regex engine, or a piece of specialized software embedded in many programming languages. R, Python, and Ruby (among many others) come with a regex engine ready to go. We do not access the engine directly, but the functions that take regular expressions as arguments call on it whenever its needed.  
-
-When the matching is done, we’ll know if the regular expression found the pattern of interest in the input string.
-
---
-
 &lt;/br&gt;&lt;/br&gt;
 
-To search for a specific sequence of characters, the regexp (regular expression) we need is simply that sequence of characters.
 
+
+The matching is done by the regex engine. We do not access the engine directly, but functions that take regular expressions as arguments call on it whenever its needed.
 
 ---
 
@@ -1798,45 +2030,20 @@ To search for a specific sequence of characters, the regexp (regular expression)
 The .bg-yellow[dog] is fat.
 
 ]
-
-???
-
-???
-
-In a regular expression, most letters and characters will simply match themselves. "dog" tells the regex engine to find a d, immediately followed by an o, immediately followed by a g. (all characters together and in that order when read from left to right). This is similar to when we use the find tool in a word processor to look for words in our texts. 
-
----
-
-class: center, middle
+&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;
+.f3[
+To search for a specific sequence of characters, the regexp (regular expression) we need is simply that sequence of characters]
 
 
-.f3[✋ How can we tell if the regular expression is matching anything?]
-
-???
-
-In the previous example, the regular expression dog matched the string dog in the input text, and I showed you this match with some yellow highligting. Before we move on, now would be a good time to learn how we can test regular expressions and see if and how they are getting matches.
-
-We have many options for this. If you have a web connection, I strongly suggest using online testers and debuggers.
+&gt; find a **d** followed by an **o** followed by a g. (all characters together and in that order when read from left to right)
 
 ---
 
 ## Online regex testers
+.f3[Is the regular expression matching anything?]
 
-???
-
-For both beginners or advanced users of regex, it helps to check and test our regular expressions before putting them in our R code. For this, there are many interactive tools that can help us understand what is going on with the regular expression that we’re writing.
-
-I’ll list some that I’m familiar with here, and that I like for their simple user interface, but feel free to use any of the hundreds of testers out there.
-
---
 
 - [rubular](https://rubular.com/) by Michael Lovitt  
-
-???
-
-The cleanest, most straightforward tester I know of is rubular, by Michael Lovitt. This is the one I’ll use for demonstration. These other testers are also good options so I’ll leave them here.
-
---
 
 - [regex101](https://regex101.com/) by Firas Dib 
 
@@ -1846,193 +2053,93 @@ The cleanest, most straightforward tester I know of is rubular, by Michael Lovit
 
 ---
 
-## Inside R 
-
-???
-
-We can also test regular expressions within R. The regexplain package runs inside Rstudio and works quite well, or we can call the str_view function from the stringr package to show us any matches. I personally prefer the online testers, but this is completely up to you.
-
---
-
-- 📦 [`regexplain`](https://www.garrickadenbuie.com/project/regexplain/) by Garrick Aden‑Buie
-
-- `str_view()` from 📦 .b.red[`stringr`]
-
----
-
 ## Regex Testers
 
 &lt;img src="imgs/regextester.png" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
 
-???
-
-In general, interactive testers for regular expressions have three core components. 
-A text box to write our regular expression, one for the input string, and a panel to display the matched patterns. 
-
 
 ---
+
 class: inverse
-## Your Turn
+## Practice
 
-???
-
-Now its your turn, in your web browser, navigate to either of these four interactive testers and have a look at its user interface.
-
---
-
-Navigate to [rubular](https://rubular.com/), [regex101](https://regex101.com/), [regexr](https://regexr.com/), or [regexpal](https://www.regexpal.com/) and familiarize yourself with the user interface
-
-???
-
-Then paste the following into the box for the input text. You might recognize this text as part of a recipe.
-
---
+.f3.white[Navigate to [rubular](https://rubular.com/), [regex101](https://regex101.com/), [regexr](https://regexr.com/), or [regexpal](https://www.regexpal.com/)
 
 Input the following text into the test string field: 
+]
 
---
+milk  
+rice   
+cereal  
+salt  
+soda  
 
-`
-2 cups whole milk  
-1 cup white rice (uncooked)  
-1 pinch salt  
-1/2 cup water  
-1/4 cup dark brown sugar
-`  
+.f3.white[Write regular expressions (one at a time) to match the things we can drink and look at the match results]
 
---
-
-Write regular expressions (one at a time) to match the wet ingredients and look at the match results
-
-???
-
-Then, write regular expressions in the input field to match the wet ingredients, which would be  milk and water, and look at how the resulting matches are shown.
 
 ---
 
-class: center, middle, dk-section-title
-background-image:url("images/dfkt-nkynQWagL-s-unsplash.jpg")
-background-size: cover
-# Literal Characters and Metacharacters
+## Literal Characters and Metacharacters
 
-???
+.f2[
+Strings and regular expressions are made of characters
 
-Strings are made of characters, and so are regular expressions. For regular expressions, we can group characters into two classes depending on their behavior.
+For regular expressions, characters can be grouped into two classes depending on their behavior
+]
 
 ---
 
 ## Literal characters
 
-If input string is **"dog"** and regex is .b.orange[dog],
+.f2[
+If input string is **"dog"** and regex is .b.orange[dog]
 
-We will get a match whenever the characters .orange[`d`], .orange[`o`], and .orange[`g`] occur consecutively in the input text.
-
-???
-
-If we are searching for occurrences of one specific sequence of characters, the regular expression to use is just that sequence of characters.
+We will get a match whenever the characters .orange[`d`], .orange[`o`], and .orange[`g`] occur consecutively in the input text]
 
 --
 
 `"dog"` tells the regex engine:
 find a .orange[d], immediately followed by an .orange[o], immediately followed by a .orange[g] (.b[together and in that particular order])
 
-???
-
-Lets look at the example from earlier, if our regular expresion is dog, the regex engine will look for a d, followed by an o, followed by a g, together an this exact order.
-
 ---
 
 ## Literal characters (continued)
 
-.orange[`d`], .orange[`o`], and .orange[`g`] are examples of literal characters.
+.f3[.orange[`d`], .orange[`o`], and .orange[`g`] are examples of literal characters]. 
 
-???
 
-In this example, the d, o, and g in dog are literal characters. They stand exactly for what they are.
-
---
-
-They stand for exactly what they are: .orange[`d`] in the regex matches a “.purple.b[d]” in the input text, .orange[`o`]  matches an “.purple.b[o]” in text, and so on.
+.f2[They stand for exactly what they are: .orange[`d`] in the regex matches a “.purple.b[d]” in the input text, .orange[`o`]  matches an “.purple.b[o]” in text, and so on.]
 
 ---
 class: middle
 
-.f3[The power and flexibility of regular expressions comes from their ability to describe more complex patterns.]
+.f2[The power and flexibility of regular expressions comes from their ability to describe more complex patterns.
 
-???
 
-Searching for characters or consecutive sequences of characters or letters is useful, but the diversity of patterns that we can match with regex go far beyond just matching letters, digits, and any of the symbols on our keyboards.
-
---
-
-.f3[
 If a text pattern can be described verbally, we can most likely write regular expression to match it.]
 
-???
-
-With regular expressions, if we can describe a pattern verbally, its very likely that we can write an expression to match it. 
 
 ---
 
 ### Possible patterns
 
-???
-
-This is what I mean. With a single regular expression, we can describe and match all kinds of patterns, which can be useful for data cleaning. These are verbal descriptions of the patterns we can easily match with regular expressions. 
-For example
-
---
 
 - "dog" but not "dogs"  
 
-???
 
-dog but not dogs, or 
-
---
-
-- "dogs" but only if a string begins with "dogs"  
-
-???
-
-dogs but only if this match is at the start of the string,
-
---
+- "dogs" but only if the match is at the start of the string,
 
 - digits (0, 1, 2, 3, 4, 5, 6, 7, 8,  9)  
 
-???
 
-we can match digits without typing each one
-
---
-
-- "modeling" or "modelling"  
-
-???
-
-or alternate spellings of the same word, 
-
---
-
-- words ending in "at"
-
-???
+- "modeling" or "modelling"  (alternate spellings of the same word)
 
 
-or words that begin or end with a specific pattern
-
---
+- words ending in "at" (words that begin or end with a specific pattern)
 
 - strings that start with digits
 
---
-
 - dates
-
-???
-
-We can also look for dates in various formats
 
 ---
 
@@ -2040,68 +2147,23 @@ We can also look for dates in various formats
 
 - zip codes
 
-???
-
-or zip codes
-
---
-
 - numbers inside square brackets and also the brackets  
-
-???
-
-or find numbers if they are surrounded by brackets, what else, 
-
---
 
 - valid Twitter handles (start with @, no spaces or symbols, &lt;16 characters)
 
-???
-
-twitter handles, 
-
---
-
 - UPPERCASE words
-
-???
-
-and words with different letter case, among many other things
---
-
-- positions at which strings switch letter case (e.g. lowerUPPER)
-
-???
-
-To describe these patterns, we’ll use another type of characters, which have special meaning when they appear in a regular expression.
 
 ---
 
 ## Metacharacters
-To match more than literal strings of text, we call on a small subset of characters that have special functionalities when they appear in a regular expression.
 
-???
-
-To do more than search for literal strings of text, we call on a few characters that take on special functionalities when they appear in a regular expression. These metacharacters do not stand for themselves, but instead are interpreted in a special way. 
-
---
+.f3[To match more than literal strings of text, a small subset of characters that have special functionalities when they appear in a regular expression. Metacharacters do not stand for themselves, they interpreted in a special way.]
 
 .f3[ 
 Metacharacters include: .b.orange[[]\^$.|?*+()], which are reserved for unique matching purposes.
 ]
 
-???
 
-Metacharacters include: brackets, the caret, dollar sign, asterisk, plus, dot, and vertical bar. In regular expressions these characters are reserved for unique matching purposes.  These are the building blocks we need to code patterns that describe more complicated queries.
-
----
-class: center, middle
-
-## Most metacharacters fit into major "families"
-
-???
-
-Depending on what they do, we can place most metacharacters into major “families“
 
 ---
 
@@ -2109,65 +2171,31 @@ Depending on what they do, we can place most metacharacters into major “famili
 .b[Wildcards] stand in for unknown characters  
 ]
 
-???
 
-the dot character is a wildcard, it matches any character once
-
---
-
-&amp;nbsp; .f1.orange.pre[&amp;nbsp;.&amp;nbsp; ] &amp;nbsp;&amp;nbsp; match any character
+&amp;nbsp; .f1.orange.pre[&amp;nbsp;.&amp;nbsp; ] &amp;nbsp;&amp;nbsp; match any character once
 ***
 
---
 
 .b.orange[f..l] matches ".b.bg-yellow[fill]" and ".b.bg-yellow[fool]", but not "flail"  
 
-???
-
-f dot dot l matches fill and fool, but not flail because the sequence we specified has two dots between the f and the l, and flail has three characters between the f and the l
-
---
 
 .b.orange[.top] matches ".b.bg-yellow[stop]" and "is.b.bg-yellow[otop]e", but not "topple"  
 
-???
-
-the same thing happens with dot t o p, the dot can be anything, so we'll match stop and part of isotope
-
---
 
 &gt; note the substring match in "is**otop**e" 
 
 ---
 
 .f3[
-.b[Character sets] match one or more characters inside the square brackets 
+.b[Character sets] match one or more characters enclosed in square brackets 
 ]
-
-???
-
-another useful metachacter family are Character sets. Character sets match any of the characters we put inside square brackets
-
---
 
 &amp;nbsp;.b.orange.pre[&amp;nbsp;[ ] &amp;nbsp;] &amp;nbsp;&amp;nbsp; match a set of characters  
 ***
 
---
-
 .b.orange[[cb]at] matches ".b.bg-yellow[cat]", and ".b.bg-yellow[bat]", but not "rat"
 
-???
-
-if we write a regexp with a character set that contains c and b, followed by the literal string at. Well match cat and bat, but not rat because the letter r is not inside the character set.
-
---
-
 .b.orange[[CK]at[iey]] matches ".b.bg-yellow[Caty]", ".b.bg-yellow[Kati]", ".b.bg-yellow[Katy]", and ".b.bg-yellow[Kate]"
-
-???
-
-In the next example, a single regexp matches many variations of the same string because we’re allowing many combinations of the letters inside the two character sets.
 
 ---
 
@@ -2180,16 +2208,9 @@ In the next example, a single regexp matches many variations of the same string 
 
 ***
 
-???
-
-If we put a caret inside a character set, we can negate the set and match everything except whats inside the brackets.
-
-
---
 
 .b.orange[[^aoeiou]] matches consonants
 
---
 
 .b.orange[[^R]] matches everything except capital R
 
@@ -2202,35 +2223,17 @@ If we put a caret inside a character set, we can negate the set and match everyt
 Dash (.b.orange[\-]) inside a character set abbreviates alphabetical or numeric sequences 
 ***
 
-???
-
-Also, we can use the dash inside a character set to indicate a series of sequential characters. This applies to letters in the alphabet and to digits
-
---
 
 .b.orange[[A-D]]  matches any single letter from A,B,C, or D (uppercase)
 
-???
-
-In one example we’ll be matching A,B,C or D, 
-
---
 
 .b.orange[[5-8]]  &amp;nbsp;matches any single digit between 5 and 8  
 
-???
-
-and in the other 5,6,7, or 8.
-
---
-
 .b.orange[[A-Za-z]]  matches all alphabetical characters
 
-???
 
-Character sets are case sensitive, so to match all alphabetical characters we would specify a range from uppercase A through Z and lowercase a though z. 
+&gt; Character sets are case sensitive
 
---
 
 &gt; character ranges can also be negated with `^`
 
@@ -2240,51 +2243,29 @@ Character sets are case sensitive, so to match all alphabetical characters we wo
 .b[Anchors] specify the relative position of the pattern being matched   
 ]
 
-???
-
-Another important family of metacharacters are anchors. We use these to specify the relative position of the patterns we want to match. 
-
---
 
 &amp;nbsp;.orange.f3.pre[&amp;nbsp;^&amp;nbsp;] &amp;nbsp;&amp;nbsp;     starts with  
 &amp;nbsp;.f3.orange.pre[&amp;nbsp;$&amp;nbsp;]  &amp;nbsp;&amp;nbsp; ends with  
+.b.orange[`^`] outside a pair of square brackets is an anchor
 ***
 
-???
 
-The anchors are:
-the caret, for specifying the start of a string, and the dollar sign to indicate the end.
-IF you remember from just before, the caret works as a negation token, but only inside a character set. I you see it outside a pair of square brackets, assume its an anchor.
-
---
 
 .b.orange[^mil] matches ".b.bg-yellow[mil]kshake" but not "family"  
 
-???
-
-Lets look at some examples,
-a start anchor followed by m, I, L matches milkshake but not family, because the three-letter sequence is only at the start of the string in the case of milkshake.
-
---
-
 .b.orange[ing$] matches "go.b.bg-yellow[ing]" but not "ingest"  
-
-???
-
-Same thing with the end anchor. I n g before a dollar sign restricts our match to strings that have this particular sequence at the end of the string.
-
---
 
 &gt; note the substring matches
 
 ---
 
 class: inverse
-### Your Turn
-1\. Write a regexp that can match **tail**, **tool**, **tall**, and **toil**  
---
 
-2\. How can we match **Jocelyn**, **Jocelin**, and **Joselyn** but not Jozelyn using character sets?
+### Practice
+.f3.white[
+- Write a regexp that can match **tail**, **tool**, **tall**, and **toil**  
+
+- How can we match **Jocelyn**, **Jocelin**, and **Joselyn** but not Jozelyn using character sets?
 
 .fl.w-third.pa0[.tc[
 a) Joscel[iy]n
@@ -2295,10 +2276,16 @@ b) Jo[sc^z]el[yi]n
 .fl.w-third.pa0[.tc[
 c) Jo[sc]el[yi]n
 ]]
+]
 
---
+---
 
-3\. Which of these regular expressions matches **`food`** at the beginning of a string?
+class: inverse
+
+.f3.white[
+- Which of these regular expressions matches **`food`** at the beginning of a string?
+
+
 .fl.w-25[.tl[
 a) ^food
 ]]
@@ -2311,39 +2298,18 @@ c) $food
 .fl.w-25[.tl[
 d) food^
 ]]
+]
 
 ---
 
 .f3[**Quantifiers** specify how many times a character or character class must appear in the input for a match to be found]
-
-???
-
-Lets look at another family of metacharacters that will really add power and flexibility to our regex. We use quantifiers to specify how many instances of a character or  character set  must be in the input for us to get a match. 
-
-We can use a question mark, asterisk, plus, or curly brackets to specify how many times something has to be present in order to get a match. 
-
---
 
 &amp;nbsp;.f2[.orange.f1[&amp;nbsp;?&amp;nbsp;] &amp;nbsp;&amp;nbsp;Zero or one ]  	
 &amp;nbsp;.f2[.orange.f1[&amp;nbsp;\\\*&amp;nbsp;] &amp;nbsp;&amp;nbsp;Zero or more occurrences] 	
 &amp;nbsp;.f2[.orange.f1[&amp;nbsp;+&amp;nbsp;]	 &amp;nbsp;&amp;nbsp;One or more occurrences]   
 &amp;nbsp;.f2[.orange.f1[&amp;nbsp;{}] 	&amp;nbsp;&amp;nbsp;Exactly the specified number of occurrences]  	
 
-???
-
-Question mark indicates zero or one
-asterisk is for zero or more 
-plus sign means one or more occurrences  	
-and a number inside curly brackets lets us define a specific number of occurrences
-
---
-
 &gt; quantifiers apply to the preceding character
-
-???
-
-be aware that these metacharacters go after what we want to match. Quantifiers
-match a certain quantity of the character or token immediately to its left.
 
 ---
 
@@ -2354,19 +2320,10 @@ match a certain quantity of the character or token immediately to its left.
 
 &gt; zero or one `els (l)`
 
-???
-
-For example, we use the question mark here to match model then cero or one els, then ing, to match alternative spellings of the word modeling.
-
---
 
 .b.orange[ya*y!] matches ".b.bg-yellow[yy!]", ".b.bg-yellow[yay!]", ".b.bg-yellow[yaaay!]", ".b.bg-yellow[yaaaaaay!]", etc.
 
 &gt; zero or more `aes (a)`
-
-???
-
-The asterisk after an a will match zero or more aes
 
 ---
 
@@ -2376,29 +2333,21 @@ The asterisk after an a will match zero or more aes
 
 &gt; one or more `oes (o)`
 
-???
 
-the plus sign is similar, but it matches one or more, in this case, one or more oes
-
---
- 
 .b.orange[e{2}] matches .“k.b.purple.bg-yellow[ee]p” and “b.b.purple.bg-yellow[ee]" but not “meat” 
 
 &gt; exactly two `ees (e)`
 
-???
-
-and finally we use curly braces here to match exactly two ees
 
 ---
 class: inverse
-### Your Turn
+## Practice
 
-1\. Use a quantifier to match **cute**, **cuuute**, **cuuuuuute**, and **cuuuuuuuuute**  
+.f3.white[
+- Use a quantifier to match **cute**, **cuuute**, **cuuuuuute**, and **cuuuuuuuuute**  
 
---
+- How can we match Computer, computer, Computers, and computers?
 
-2\. How can we match Computer, computer, Computers, and computers?
 .fl.w-third.pa0[.tc[
 a) [cC]omputers?
 ]]
@@ -2409,7 +2358,7 @@ b) Computers+
 c) [cC]omputer[s]+
 ]]
 
-
+]
 ---
 
 .f3[
@@ -2418,21 +2367,12 @@ c) [cC]omputer[s]+
 ]
 ***
 
-???
-
-We have a few more families of metacharacters to look at. 
-Alternation is a way to separates a series of alternatives. We simply use the vertical bar to separate two or more alternatives. 
-
---
 
 .b.orange[dog|bird] matches ".b.purple.bg-yellow[dog]" or ".b.purple.bg-yellow[bird]"
 
 .b.orange[gr(a|e)y] matches ".b.purple.bg-yellow[gray]" and ".b.purple.bg-yellow[grey]"
 &gt; note the alternation enclosed in brackets
 
-???
-
-In the first example we can match either dog or bird, and in the second one either a or e. 
 
 ---
 
@@ -2440,10 +2380,6 @@ In the first example we can match either dog or bird, and in the second one eith
 .b[Special sequences and escapes]&lt;br&gt;
 .b.orange.pre[&amp;nbsp;\\&amp;nbsp;] 	&amp;nbsp;&amp;nbsp; signals a shorthand sequence or gives special characters a literal meaning
 ]
-
-???
-
-Now, lets look at the backslash, which actually falls into two families of metacharacter. The backlash can either signal a special shorthand sequence, or it can give any of the special characters we’ve seen before a literal meaning. 
 
 ---
 
@@ -2454,32 +2390,14 @@ Now, lets look at the backslash, which actually falls into two families of metac
 &gt; question mark treated as a literal character, but in R escape the backslash first
 ]
 
-???
 
-Suppose we want to match a question mark, and not have it act as a quantifier. To do this, we precede it with a backslash. In this case, we say that the backslash is escaping the question mark.
-
-
-Escapes look like this.
-If we want to match a question mark we escape it with a backslash, and in R, we escape the backslash with another backslash just because R has its own interpretation of the backslash. By escaping the backslash, we tell R to pass it along to the regex engine and this will then escape our character of interest.
-
---
 
 _Metacharacters inside a character set are stripped of their special nature_
-
-???
-
-Also, if we use metacharacters inside a character set, we dont need to escape them, they will be treated as literal characters.
 
 ---
 
 .f3[.b[Shorthand sequences] are available to refer to commonly-used character sets
 ]
-
-???
-
-The other use of the backslash is to refer to some character sets that are used so frequently that they have their own shorthand. 
-
---
 
 .b.orange[\w] &amp;nbsp;letters, underscore, and numbers  &lt;br&gt;
 .b.orange[\d] &amp;nbsp;digits&lt;br&gt;
@@ -2488,34 +2406,18 @@ The other use of the backslash is to refer to some character sets that are used 
 
 &gt;.small[Predefined character classes help us avoid malformed character sets]
 
-???
-
-Some are quite simple, like using backlash d to refer to all digits between cero and nine, or backslash s to refer to space. Others are more involved, and well go over these next.
 
 ---
 
 ### Word boundaries .b.orange[`\\b`]
 
-???
-
-First, word boundaries, which we write as backslash b. 
-
---
 
 Match **positions** between a _word_ character (letter, digit or underscore) and a non-word character (usually a space or the start/end of a string).
 *** 
 
-???
-
-Word boundaries match positions, not any particular character that prints on the screen. This shorthand sequence will help us match the position between a word character, which includes letters and digits, and non-words, which are usually space or the start or end of a string.
-
---
-
 &gt; Before a sequence of word characters
 
 .b.orange[\\bcase] matches ".b.bg-yellow.purple[case]" and "two .b.bg-yellow.purple[case]s" but not "suitcase"  
-
---
 
 &gt; After a sequence of word characters
 
@@ -2526,24 +2428,13 @@ Word boundaries match positions, not any particular character that prints on the
 
 ### _Word_ characters .b.orange[`\\w`]
 
-???
-
-Now, onto word characters, which we write as backslash w. 
-
---
 
 Matches any character (letter, digit or underscore). Useful in combination with word boundaries and quantifiers.
 ***  
 
-???
-
-This matches all letters, digits, and the underscore character.
-
---
 
 Equivalent to .orange[\[a-zA-Z0-9_\]]
 
---
 
 .b.orange[\\w] matches letters (case insensitive), numbers, and underscores in:
 
@@ -2553,29 +2444,17 @@ Equivalent to .orange[\[a-zA-Z0-9_\]]
 ---
 
 class: inverse
-### Your Turn
+## Practice
 
+.f3.white[
 Enter "That athlete is at the squat rack" as the test string in a regex tester.
 
---
-
-Why are the matches different with the following three regular expressions?
+Explain the matches obtained with the following three regular expressions?
  
  a) at  
  b) \bat  
  c) at\b
-
----
-
-class: center, middle, dk-section-title
-background-image:url("images/dan-gold-4YAhiaZkUfs-unsplash.jpg")
-background-size: cover
-# Combining metacharacters 
-
-???
-
-The real power of regex comes from combining literal and metacharacters to describe patterns. Lets see how the metacharacters we learned can be used together.
-
+]
 ---
 
 ## Anchor, wildcard with quantifier (0 or more)
@@ -2585,31 +2464,17 @@ The real power of regex comes from combining literal and metacharacters to descr
 ##  Wildcard and quantifier
 .b.orange[A.\\*x] strings that start with "**A**" and end with "**x**"
 
-???
-
-Here, were matching the literal characters c, a, and n, at the start of a string followed by cero or more of a wildcard character. This will match any string that starts with can followed by anything else.
-
-This other regexp matches strings that start with a capital A and end with x, with anything in between.
-
 ---
 
 ## Shorthand sequence (space) and quantifier
 
 .b.orange[\\s{3}] matches three spaces 
 
-???
-
-We can also combine a shorthand sequence with an exact quantifier.
-
---
 
 ## Anchors, character set, and quantifier (one or more) 
 
 .b.orange[^[a-z]+$] matches a lowercase string
 
-???
-
-The second example has start and end anchors, a character set with only lowercase letters, and a quantifier for one or more ocurrences. In short this regular expression matches lowercase strings of any length.
 
 ---
 
@@ -2625,9 +2490,6 @@ The second example has start and end anchors, a character set with only lowercas
 ".b.purple.bg-yellow[Fix] the car."  
 ".b.purple.bg-yellow[12] eggs"
 
-???
-
-These next examples combine word characters, word boundaries, quantifiers and anchors to match either the last or the first word in a string, regardless of what these words are.	
 
 ---
 
@@ -2635,110 +2497,58 @@ These next examples combine word characters, word boundaries, quantifiers and an
 &lt;/br&gt;
 .center.small[Modified from '[Regular Expressions](https://github.com/rstudio/concept-maps/#regular-expressions)' concept map by Greg Wilson]
 
-???
-
-We are almost ready to start using regular expressions in R, but first I want to leave this concept map for regular expressions here. It summarizes most of what we’ve covered so far.
-
-Its now my turn to write some regex from scratch. I’ll do it in an interactive tester like before for each of these patterns. 
-
----
-
-class: my-turn
-## My Turn
-
-Write regular expressions for the patterns below and test them in an interactive tool:
-
-1. "dogs" but only if string begins with "dogs"  
-2. strings that start with digits  
-3. UPPERCASE strings  
-4. numbers in brackets  
-5. strings that end in “at” but longer than 3 characters   
-
-
 ---
 class: inverse
-## Your Turn
+## Practice
 
+.f3.white[
 Write regular expressions to match the following, making sure they work in an interactive regex tester:
 
-1. cute, cuuute, cuuuuuute, and cuuuuuuuuute 
-2. strings with both letters and digits
-3. strings ending in a period
-4. lowercase strings
-5. exactly four digits
-6. strings without the letter _**s**_
+1. strings with both letters and digits
+2. strings ending in a period
+3. lowercase strings
+4. exactly four digits
+5. strings without the letter _**s**_
+]
 
 ---
 class: center, middle, dk-section-title
-background-image:url("images/joakim-honkasalo-1LEq1hqDxEg-unsplash.jpg")
+background-image:url("imgs/bsas.jpg")
 background-size: cover
 # Regex in R
 
-???
-
-Now that we have a handle on regular expressions, we can see how this fits into our workflows in R.
-
 ---
 
-Variable names and values in columns of type `character` can be matched with regular expressions in common data transformations, including data cleaning.
+.f3[
+We can match column names and values in `character` strings with regular expressions]
 
-???
-
-First up, in the context of working with rectangular data, remember that variable names and anything that is not of class numeric is a string, which we can match flexibly with regular expressions. 
-
---
 
 &lt;img src="imgs/regexsubsetting.png" width="95%" style="display: block; margin: auto;" /&gt;
-
-???
-
-In this figure, I summarized two examples of common data transformations in which regular expressions are used. In one, a single regexp matches many values in a variable for subsetting rows. In the other one, on the right, columns are selected with a regular expression that matches part of the column names. 
 
 ---
 
 # 📦 .red[`stringr`]
 
+.f3[
 Cohesive set of functions for string manipulation
+]
 
-???
 
-R comes well-equipped for performing most string operations, but the syntax for the built-in functions that take regular expression is not always consistent, which makes them slower to learn and memorize. To get around this, we can use the stringr package. stringr provides a cohesive set of functions for string manipulation. 
-
---
 
 - Function names start with .b[`str_`]   
 
-???
-
-Function names in stringr are informative, they all start with the str_ prefix, and they use consistent argument names.
-
---
-
 - All functions take a vector of strings as the first argument (pipe-friendly)  
 
-???
-
-Stringr is part of the tidyverse suite of packages, so by design it works well with the pipe operator and integrates with packages we often use for preparing and cleaning data. In fact, all functions in stringr take a vector of strings as the first argument, which makes them pipe-friendy.
-
---
 
 **`regex()`** modifier to control matching behavior
 
 .content-box-gray[`ignore_case=TRUE` will make matches case insensitive]
 
-???
-
-Additionally, functions in stringr have extra arguments for precise control of matching behavior, including an argument for ignoring letter case and making matches case insensitive.
 
 ---
 
 ## `stringr` examples
 
-???
-
-Now we can look at some examples of stringr functions and how they work.
-
---
 
 **Matches?**
 
@@ -2751,9 +2561,7 @@ str_detect(string = c("catalog", "battlecat", "apple"), pattern = "cat")
 ## [1]  TRUE  TRUE FALSE
 ```
 
-???
-
-To detect matches we can use the SRT detect function, which as the name implies detects is a pattern, described by a regular expression, is present in a character string. The output is a logical, TRUE or FALSE vector of the same length as our input string.
+Output is a logical, TRUE or FALSE vector of the same length as our input string
 
 ---
 
@@ -2770,9 +2578,7 @@ str_which(string = c("catalog", "battlecat", "apple"), pattern = "cat")
 ## [1] 1 2
 ```
 
-???
-
-We may also want to know which elements are the ones that match. For this we use STR which, which will give us the index for each of the matching elements.
+Output is the index for each of the matching elements
 
 ---
 
@@ -2791,9 +2597,6 @@ str_replace(string = c("colour", "neighbour", "honour"),
 ## [1] "color"    "neighbor" "honor"
 ```
 
-???
-
-To go ahead and replace matches with something else, we can use str replace. It has an additional argument for our replacement, and in the example, we replace ou with just o to go from british to american spelling. The result is the input vector but with any matches replaced.
 
 ---
 
@@ -2808,9 +2611,6 @@ str_replace(string = c("colOur", "neighboUr", "honOUr"),
             replacement = "o") 
 ```
 
-???
-
-This is the same example, but with case insensitive matching. 
 
 ---
 
@@ -2825,9 +2625,6 @@ str_replace(string = c("colOur", "neighboUr", "honOUr"),
             replacement = "o") 
 ```
 
-???
-
-The input string has a mix of upper and lower case letters, but if we want we can ignore letter case and do the replacements anyway. 
 
 ---
 
@@ -2847,23 +2644,21 @@ str_replace(string = c("colOur", "neighboUr", "honOUr"),
 ## [1] "color"    "neighbor" "honor"
 ```
 
-???
-
-To do this, we put our pattern argument inside the regex function and set the ignore case argument to TRUE. This gives us the same output as before.
 
 ---
 
 class: inverse
 
-## Your Turn
+## Practice
 
-Match the following regular expressions against the test vector below using `str_detect`.  Can you explain the matches?
+.f3[
+Match these REs against the test vector below using `str_detect`.  Can you explain the matches?
 
 Regular expressions
 1. ^dog
 2. ^[a-z]+$
 3. \\\\d
-
+]
 
 
 ```r
@@ -2874,50 +2669,27 @@ test_vector &lt;- c("Those dogs are small.","dogs and cats",
 
 ---
 
-class: center, middle, dk-section-title
-background-image:url("images/patrick-janser-YGP2NAGaBwc-unsplash.jpg")
-background-size: cover
-# Regular Expressions and Data Cleaning
 
 ---
 
-## Using regular expressions in data cleaning
+## Using regular expressions in data manipulation
 
-???
 
-We covered how the stringr functions help us match patterns in input strings, but now we will really land on how regex can help us work with cleaning messy data and do so efficiently.
-
-In general, there are two main uses for regular expressions when we have data in a rectangular structure with rows and columns, and we are trying to make it usable.
-
---
 
 .f3[
 Select, subset, keep, or discard rows and columns
 ]
 
-???
-
-First we can modify, keep, or discard rows or columns that contain a pattern we are interested in.
-
---
 
 .f3[   
 Substitute or recode values
 ]
 
-???
-
-Another major use case is replacing, or recoding values. For example, recoding strings with multiple alternate spellings.
-
---
 
 .f3[
 Extract or remove substrings
 ]
 
-???
-
-Or we can also use it to clean values in the data by extracting or removing pieces of character strings.
 
 ---
 
@@ -2925,84 +2697,31 @@ Or we can also use it to clean values in the data by extracting or removing piec
 
 To select variables in 📦 .b.red[`dplyr`] and 📦 .b.red[`tidyr`], we:
 
-???
-
-Lets start by looking at how we can use regular expression to select columns, because most data cleaning workflows involve specifying variables to work on.
-
-To select varibles in dplyr and tidyr, two tidyverse packages that we use often for cleaning and transforming data, we have several options. You may remember this from a previous lesson on restructuring data.
-
---
-
 - write out their names   
-
-???
-
-One, we can refer to them by name
-
---
 
 - refer to them by position  
 
-???
-
-or by position, which I dont recommend,
-
---
-
 - specify ranges of contiguous variables
 
-???
-
-also, we can specify ranges of continuous variables 
-now Id like to introduce a fourth option, which actually takes regular expressions.
-
---
 
 - .f3[use 📦 .b.red[`tidyselect`] helper functions]
 
-???
-
-We can use tidyselect functions to refer to columns in our data.
-
 ---
 
 ## 📦 .red.b[`tidyselect`] helpers
 
-???
-
-Tidyselect is a package that works behind the scenes to provide functions that help us select variables when working with various tidyverse packages. Of the many functions provided by tidyselect, there are four built specifcally to select variables by matching patterns in their names.
-
---
 
 .b[`matches()`] takes regular expressions, and selects variables that match a given pattern
 
-???
 
-The ‘matches’ function takes regular expressions and selects variables that match our pattern of interest.
-
---
 
 **`starts_with()`**: Starts with a prefix  
 
-???
-
-We can also select variables that start with a specific string,
-
---
 
 **`ends_with()`**: Ends with a suffix  
 
-???
-
-end with a specific suffix, 
-
---
 
 **`contains()`**: Contains a literal string 
-
-???
-
-or simply that contain a string.
 
 ---
 
@@ -3023,10 +2742,6 @@ or simply that contain a string.
 .gray[
 **`contains()`**: Contains a literal string 
 ]
-
-???
-
-If we recall what we learned earlier, regular expressions can match the start and end of a string, and we know of literal characters now, so we will focus on the matches function. However, these other functions can be useful shortcuts if you want to write code for someone unfamiliar with regular expressions. Lets try this out.
 
 ---
 
@@ -3040,20 +2755,12 @@ names(penguins)
 ```
 
 ```
-## [1] "species"           "island"            "bill_length_mm"    "bill_depth_mm"    
-## [5] "flipper_length_mm" "body_mass_g"       "sex"               "year"
+## [1] "species"           "island"            "bill_length_mm"   
+## [4] "bill_depth_mm"     "flipper_length_mm" "body_mass_g"      
+## [7] "sex"               "year"
 ```
 
-???
-
-This example uses the penguins data from the palmerpenguins package. Here we will be selecting some columns. 
-
-We can print the names of the variables in the data with the names argument.
-
-Lets say we want to subset the data and keep the species column,  and only those columns that measure the length of some part of the penguins. 
-
---
-
+.tinycode[
 
 ```r
 penguins %&gt;% 
@@ -3062,32 +2769,18 @@ penguins %&gt;%
 
 ```
 ## # A tibble: 3 × 3
-##   species   bill_length_mm flipper_length_mm
-##   &lt;fct&gt;              &lt;dbl&gt;             &lt;int&gt;
-## 1 Chinstrap           49.3               203
-## 2 Chinstrap           43.2               187
-## 3 Gentoo              43.3               208
+##   species bill_length_mm flipper_length_mm
+##   &lt;fct&gt;            &lt;dbl&gt;             &lt;int&gt;
+## 1 Gentoo            48.4               213
+## 2 Adelie            41.1               192
+## 3 Adelie            36.4               184
 ```
+]
 
-???
-
-Looking at the list of names, I recognize two length measurements: bill length and flipper length.
-
-One option is to simply write out the variable names in the select function from dplyr. In the second piece of code, we select species and the two length measurements by writing out their names, and for display purposes were printing three rows at random.
 
 ---
 
 ### Selecting columns by matches in variable names
-
-
-```r
-names(penguins)
-```
-
-```
-## [1] "species"           "island"            "bill_length_mm"    "bill_depth_mm"    
-## [5] "flipper_length_mm" "body_mass_g"       "sex"               "year"
-```
 
 
 ```r
@@ -3098,26 +2791,17 @@ penguins %&gt;%
 
 ```
 ## # A tibble: 3 × 3
-##   species bill_length_mm flipper_length_mm
-##   &lt;fct&gt;            &lt;dbl&gt;             &lt;int&gt;
-## 1 Adelie            36.9               189
-## 2 Gentoo            49.4               216
-## 3 Gentoo            43.6               217
+##   species   bill_length_mm flipper_length_mm
+##   &lt;fct&gt;              &lt;dbl&gt;             &lt;int&gt;
+## 1 Gentoo              49.8               229
+## 2 Gentoo              49.3               217
+## 3 Chinstrap           43.5               202
 ```
-
-???
-
-Alternatively, we can use the matches helper and search for the literal string length. The text in quotes inside matches is a regular expression. This gives the same result as using “contains” helper, which is meant for literals 
 
 ---
 
 ### Match values and filter rows
 
-???
-
-Another common transformation that we use in data cleaning is to filter rows according to values in a variable. We can also use regular expressions for flexible matching to either keep or discard rows.
-
---
 
 Mammals sleep dataset (`msleep`) from 📦 .red.b[`ggplot2`]
 
@@ -3128,27 +2812,18 @@ library(ggplot2)
 
 
 ```r
-msleep %&gt;% select(name,genus) %&gt;% sample_n(7)
+msleep %&gt;% select(name,genus) %&gt;% sample_n(4)
 ```
 
 ```
-## # A tibble: 7 × 2
-##   name                   genus       
-##   &lt;chr&gt;                  &lt;chr&gt;       
-## 1 Arctic ground squirrel Spermophilus
-## 2 Thick-tailed opposum   Lutreolina  
-## 3 Tiger                  Panthera    
-## 4 Red fox                Vulpes      
-## 5 Musk shrew             Suncus      
-## 6 Mole rat               Spalax      
-## 7 Big brown bat          Eptesicus
+## # A tibble: 4 × 2
+##   name                      genus     
+##   &lt;chr&gt;                     &lt;chr&gt;     
+## 1 Bottle-nosed dolphin      Tursiops  
+## 2 Eastern american chipmunk Tamias    
+## 3 African giant pouched rat Cricetomys
+## 4 Macaque                   Macaca
 ```
-
-???
-
-This examples uses the mammal sleep dataset that comes with ggplot2
-
-Here I’m selecting two columns, the common and the scientific name of the sleepy mammals just for a quick glimpse of these two columns. I’m printing seven rows at random, but the data has 83 different species. 
 
 ---
 
@@ -3174,15 +2849,11 @@ msleep %&gt;%
 ## 5 Mole rat                  Spalax
 ```
 
-???
-
-Lets say we only want rows in which the common name includes the string “rat”. After selecting our columns of interest we can use str_detect inside the filter function from dplyr to to match the literal string rat in the common names. Remember that str detect gives us a logical vector, so the filter function will keep only those rows for which the condition we evaluated was TRUE, that is, the name contained the string rat.
-
 ---
 
 class: inverse
 
-# Your Turn
+## Practice
 
 .f3[🐀 After running the code below, how can we exclude muskrats from the matches?]
 
@@ -3193,1022 +2864,6 @@ msleep %&gt;%
   filter(str_detect(string = name,pattern = "rat"))
 ```
 
----
-
-
-
-
-## Substitute or recode values
-
-.panelset[
-.panel[.panel-name[companies]
-
-<div id="misjszgqfb" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
-}
-
-#misjszgqfb .gt_table {
-  display: table;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#misjszgqfb .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#misjszgqfb .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#misjszgqfb .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 4px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#misjszgqfb .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#misjszgqfb .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#misjszgqfb .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#misjszgqfb .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#misjszgqfb .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#misjszgqfb .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#misjszgqfb .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#misjszgqfb .gt_group_heading {
-  padding: 8px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#misjszgqfb .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#misjszgqfb .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#misjszgqfb .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#misjszgqfb .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#misjszgqfb .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 12px;
-}
-
-#misjszgqfb .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#misjszgqfb .gt_first_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-}
-
-#misjszgqfb .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#misjszgqfb .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#misjszgqfb .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#misjszgqfb .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#misjszgqfb .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#misjszgqfb .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding: 4px;
-}
-
-#misjszgqfb .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#misjszgqfb .gt_sourcenote {
-  font-size: 90%;
-  padding: 4px;
-}
-
-#misjszgqfb .gt_left {
-  text-align: left;
-}
-
-#misjszgqfb .gt_center {
-  text-align: center;
-}
-
-#misjszgqfb .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#misjszgqfb .gt_font_normal {
-  font-weight: normal;
-}
-
-#misjszgqfb .gt_font_bold {
-  font-weight: bold;
-}
-
-#misjszgqfb .gt_font_italic {
-  font-style: italic;
-}
-
-#misjszgqfb .gt_super {
-  font-size: 65%;
-}
-
-#misjszgqfb .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
-  font-size: 65%;
-}
-</style>
-<table class="gt_table">
-  
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-size: 17px;">Company</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-size: 17px;">Operation</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_left" style="font-size: 17px;">Olsson</td>
-<td class="gt_row gt_left" style="font-size: 17px;">Logistics</td></tr>
-    <tr><td class="gt_row gt_left" style="font-size: 17px;">Ollsson</td>
-<td class="gt_row gt_left" style="font-size: 17px;">Logistics</td></tr>
-    <tr><td class="gt_row gt_left" style="font-size: 17px;">olson</td>
-<td class="gt_row gt_left" style="font-size: 17px;">Logistics</td></tr>
-    <tr><td class="gt_row gt_left" style="font-size: 17px;">Olsson LLC</td>
-<td class="gt_row gt_left" style="font-size: 17px;">Logistics</td></tr>
-    <tr><td class="gt_row gt_left" style="font-size: 17px;">Olsson Group</td>
-<td class="gt_row gt_left" style="font-size: 17px;">Logistics</td></tr>
-    <tr><td class="gt_row gt_left" style="font-size: 17px;">Olsonn</td>
-<td class="gt_row gt_left" style="font-size: 17px;">Logistics</td></tr>
-    <tr><td class="gt_row gt_left" style="font-size: 17px;">Mila Inc</td>
-<td class="gt_row gt_left" style="font-size: 17px;">E-commerce</td></tr>
-    <tr><td class="gt_row gt_left" style="font-size: 17px;">Mila Inc</td>
-<td class="gt_row gt_left" style="font-size: 17px;">E-commerce</td></tr>
-    <tr><td class="gt_row gt_left" style="font-size: 17px;">Mila Inc</td>
-<td class="gt_row gt_left" style="font-size: 17px;">E-commerce</td></tr>
-  </tbody>
-  
-  
-</table>
-</div>
-]
-
-.panel[.panel-name[Data setup]
-
-```r
-companies &lt;- data.frame(
-  stringsAsFactors = FALSE,
-           Company = c("Olsson","Ollsson","olson",
-                       "Olsson LLC","Olsson Group","Olsonn","Mila Inc",
-                       "Mila Inc","Mila Inc"),
-         Operation = c("Logistics","Logistics",
-                       "Logistics","Logistics","Logistics","Logistics",
-                       "E-commerce","E-commerce","E-commerce")
-)
-```
-]
-]
-
-???
-
-This next use of regular expressions is particularly useful for data cleaning, since we often find ourselves replacing values to deal with unwanted variation within our data.
-
-
-This object called ‘companies’ has names and descriptions for two fake companies, and for one of the company names there are some variants and misspellings. We can use regular expressions to get rid of this bloat.
-
-And in fact, we can match all these options with a single regexp
-
----
-
-## Substitute or recode values
-.i[(correct name should be Olsson)]  
-
-```r
-companies %&gt;% 
-  mutate(Company=str_replace(Company,"[o|O]l+s+on+.*","Olsson")) %&gt;% 
-  distinct()
-```
-
-```
-##    Company  Operation
-## 1   Olsson  Logistics
-## 2 Mila Inc E-commerce
-```
-
-???
-
-Lets break down whats happening in this code block.
-
-First, notice that I used the mutate function from dplyr, which creates new columns, and in this case, is overwriting an existing one. Inside mutate, I used str replace to match a pattern and replace it with what I knew the correct name should be.
-
-The arguments in str replace are string, pattern, and replacement. In this case string is the column with the company names, pattern is a regular expression, and replacement is what we want the matches to be replaced by.
-
-The regular expression starts with a character set, the square brackets, in which I want to match either lowecase O or uppercase O. after that the plus sign is for matching one or more of the letters to their left, so that we can allow for different spellings of the same name, and the regexp ends with a dot and an asterisk, to match anything else after the first word in our input string. When this ran, it matched all the variants of Olsson and replaced them with the correct spelling I specified as the replacement.  After that, the distinct function got rid of all the duplicate entries, and we will learn more about this function and de-duplication in the next lesson.
-
----
-
-## Case insensitive matching
-
-
-```r
-companies %&gt;%
-  mutate(Company = str_replace(
-    Company,
-    regex("ol+s+on+.*", ignore_case = TRUE), "Olsson"
-  )) %&gt;%
-  distinct()
-```
-
-```
-##    Company  Operation
-## 1   Olsson  Logistics
-## 2 Mila Inc E-commerce
-```
-
-???
-
-The same code from before can be run using case insensitive matching instead of the character set with alternation that I used earlier, I think this option is actually better and the final result is the same.
-
----
-
-
-
-## Extract or remove substrings  
-
-???
-
-To wrap up this section, let’s see how we can extract or remove substrings, which are simply parts of a string.
-
---
-
-.panelset[
-.panel[.panel-name[team_record]
-<div id="nupevadoad" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
-}
-
-#nupevadoad .gt_table {
-  display: table;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#nupevadoad .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#nupevadoad .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#nupevadoad .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 4px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#nupevadoad .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#nupevadoad .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#nupevadoad .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#nupevadoad .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#nupevadoad .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#nupevadoad .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#nupevadoad .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#nupevadoad .gt_group_heading {
-  padding: 8px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#nupevadoad .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#nupevadoad .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#nupevadoad .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#nupevadoad .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#nupevadoad .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 12px;
-}
-
-#nupevadoad .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#nupevadoad .gt_first_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-}
-
-#nupevadoad .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#nupevadoad .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#nupevadoad .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#nupevadoad .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#nupevadoad .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#nupevadoad .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding: 4px;
-}
-
-#nupevadoad .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#nupevadoad .gt_sourcenote {
-  font-size: 90%;
-  padding: 4px;
-}
-
-#nupevadoad .gt_left {
-  text-align: left;
-}
-
-#nupevadoad .gt_center {
-  text-align: center;
-}
-
-#nupevadoad .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#nupevadoad .gt_font_normal {
-  font-weight: normal;
-}
-
-#nupevadoad .gt_font_bold {
-  font-weight: bold;
-}
-
-#nupevadoad .gt_font_italic {
-  font-style: italic;
-}
-
-#nupevadoad .gt_super {
-  font-size: 65%;
-}
-
-#nupevadoad .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
-  font-size: 65%;
-}
-</style>
-<table class="gt_table">
-  
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-size: 17px;">week</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-size: 17px;">result</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-size: 17px;">game</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_right" style="font-size: 17px;">12</td>
-<td class="gt_row gt_left" style="font-size: 17px;">loss</td>
-<td class="gt_row gt_left" style="font-size: 17px;">home</td></tr>
-    <tr><td class="gt_row gt_right" style="font-size: 17px;">13</td>
-<td class="gt_row gt_left" style="font-size: 17px;">loss (disqualified)</td>
-<td class="gt_row gt_left" style="font-size: 17px;">away</td></tr>
-    <tr><td class="gt_row gt_right" style="font-size: 17px;">14</td>
-<td class="gt_row gt_left" style="font-size: 17px;">win (overturned)</td>
-<td class="gt_row gt_left" style="font-size: 17px;">away</td></tr>
-    <tr><td class="gt_row gt_right" style="font-size: 17px;">15</td>
-<td class="gt_row gt_left" style="font-size: 17px;">win (forefit)</td>
-<td class="gt_row gt_left" style="font-size: 17px;">home</td></tr>
-    <tr><td class="gt_row gt_right" style="font-size: 17px;">16</td>
-<td class="gt_row gt_left" style="font-size: 17px;">win (rematch)</td>
-<td class="gt_row gt_left" style="font-size: 17px;">away</td></tr>
-  </tbody>
-  
-  
-</table>
-</div>
-]
-.panel[.panel-name[Data setup]
-
-```r
-team_record &lt;- 
-tibble::tribble(
-  ~week,               ~result,  ~game,
-    12L,                "loss", "home",
-    13L, "loss (disqualified)", "away",
-    14L,    "win (overturned)", "away",
-    15L,       "win (forefit)", "home",
-    16L,       "win (rematch)", "away"
-  )
-```
-]
-]
-
-???
-
-This data object here is called ‘team record’, it has three columns. Week, result, and game. There is some extra information in parenthesis in the result column, which we might want to either put in a separate column, or remove.
-
---
-
-.b.purple[`str_extract()`] extracts matching patterns  
-.b.purple[`str_remove()`]  removes matched patterns
-
-???
-
-To do this, we use to functions from stringr.
-str_extract, to extract substrings, o str_remove, to remove parts of a string
-
----
-
-### Extract substrings
-
-
-```r
-team_record %&gt;%
-  mutate(result_comment = str_extract(string = result, pattern = "\\(.+\\)"))
-```
-
-```
-## # A tibble: 5 × 4
-##    week result              game  result_comment
-##   &lt;int&gt; &lt;chr&gt;               &lt;chr&gt; &lt;chr&gt;         
-## 1    12 loss                home  &lt;NA&gt;          
-## 2    13 loss (disqualified) away  (disqualified)
-## 3    14 win (overturned)    away  (overturned)  
-## 4    15 win (forefit)       home  (forefit)     
-## 5    16 win (rematch)       away  (rematch)
-```
-
-???
-
-Lets start with extraction.
-str_extract follows the same stringr syntax. First argument is an input string, and second one is a pattern, described by a regular expression. If we want to extract the additional information thats inside the parentheses, we use escapes for the parenthesis because they also have a special meaning in regular expressions, and inside the escaped parenthesis we have a dot and a plus signs. This means match one or more of anything inside the parenthesis. We’re using str_extract inside mutate to create a new column, which I named result underscore comment. If we look at the resulting column, the comments about each result were put into the new column, and when there was no match an NA was introduced. 
-
---
-
-*Can we strip the parentheses with a regular expression?*
-
-???
-
-We dont need the parentheses in the new column, so how can we get rid of them.
-
----
-
-### Remove the parentheses
-.f3.b.purple[`str_remove_all()`]
-
-```r
-team_record %&gt;%
-  mutate(result_comment = str_extract(string = result, pattern = "\\(.+\\)")) %&gt;% 
-  mutate(result_comment = str_remove_all(result_comment,"[()]"))
-```
-
-```
-## # A tibble: 5 × 4
-##    week result              game  result_comment
-##   &lt;int&gt; &lt;chr&gt;               &lt;chr&gt; &lt;chr&gt;         
-## 1    12 loss                home  &lt;NA&gt;          
-## 2    13 loss (disqualified) away  disqualified  
-## 3    14 win (overturned)    away  overturned    
-## 4    15 win (forefit)       home  forefit       
-## 5    16 win (rematch)       away  rematch
-```
-
-???
-
-To remove the parentheses from the result comment column, we use str_remove all. The syntax is the same. Look at the regular expression used to describe what we want to remove. Its simply the opening and closing parenthesis inside a character set, and because theyre in a character set they do not need to be escaped. Now we use mutate to overwrite the new column, stripping away everything we defined in the character set.
-
-Two quick notes here. 
-Str remove all is a version of str remove that removes all matches and not just the first instance it finds. Also, I mentioned escaping the parenthesis to treat them as literal characters, but I never explained what they do when we use them as metacharacters. Parenthesis in regular expressions are used to define capture groups, which are beyond the scope of this course but feel free to read about them in the sources I collated under the read more materials for this lesson.
-
----
-
-### Remove substrings
-
-
-```r
-team_record %&gt;%
-  mutate(result=str_remove(
-    string= result,pattern = " \\(.*\\)"))
-```
-
-```
-## # A tibble: 5 × 3
-##    week result game 
-##   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;
-## 1    12 loss   home 
-## 2    13 loss   away 
-## 3    14 win    away 
-## 4    15 win    home 
-## 5    16 win    away
-```
-
-???
-
-Lastly, If we only wanted to remove the comments from the result column, we could also do it by removing the parentheses and everything inside them with a single regexp inside str_remove.
-
----
-
-class: my-turn
-# My Turn
-
-1. Download CRAN package descriptions  
-
---
-
-2. Select Package name, author, description, and all variables that contain 'License'  
-
---
-
-3. Filter rows for packages with names that:  
-
---
-
- - start with _gg_ (case insensitivty)
- 
---
- 
- - contain _Bayes_
- 
---
-
- - contain _glm_ but not _glmm_
-
----
-class: inverse
-# Your Turn
-
-1. Download CRAN package descriptions  
-
---
-
-2. Select package name, author, description, and all variables that end in 'ports'  
-
---
-
-3. Filter rows for packages with names that: 
-
---
-
- - end in _plot_
-
---
-
- - contain _Bayes_
-
---
-
- - contain digits  
-
---
-
- - are all UPPER CASE
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
