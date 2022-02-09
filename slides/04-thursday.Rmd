@@ -95,6 +95,28 @@ box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
 
 ---
 
+---
+class: dk-section-title
+background-image:url("imgs/brigalow.jpg")
+background-size: cover
+
+# Useful addins and helpers
+
+---
+
+- styler
+- annotater
+- littleboxes
+- packup
+- datapasta
+- regexplain
+- code sections
+- multiple cursors
+- shortcuts
+
+https://bookdown.org/content/d1e53ac9-28ce-472f-bc2c-f499f18264a3/code.html
+---
+
 - Friendly online resources
 
 StackOverflow
