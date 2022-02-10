@@ -60,6 +60,10 @@ xaringanExtra::use_tachyons()
 xaringanExtra::use_panelset()
 ```
 
+```{r xaringanExtra-clipboard, echo=FALSE}
+xaringanExtra::use_clipboard()
+```
+
 ```{r xaringan-animate-all, echo=FALSE, eval=TRUE}
 xaringanExtra::use_animate_all("fade")
 ```
@@ -134,7 +138,21 @@ Vikram Singh Rawat (2021)
 ]
 
 ---
+class: inverse
+## Prelude
 
+Let's explore the diversity of packages available on CRAN today
+```{r, eval= FALSE}
+library(dplyr)
+library(stringr)
+# download package details ------------------------------------------------
+p_db <- tools::CRAN_package_db()
+# select variables of interest -------------------------------------------
+p_db <- p_db %>% select(Package, Author, Description, Title)
+```
+
+Filter the rows to see if your particular field appears in titles or descriptions
+---
 .f3.b.red[`annotater`] https://annotater.liomys.mx
 
 Add useful annotations about the packages we are using in our scripts
