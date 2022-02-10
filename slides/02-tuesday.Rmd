@@ -3,7 +3,7 @@ title: "Getting the most out of R"
 subtitle: "Physalia Courses"  
 author: 
   - "Luis D. Verde Arregoitia"
-date: 'February 2021'
+date: 'February 2022'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css

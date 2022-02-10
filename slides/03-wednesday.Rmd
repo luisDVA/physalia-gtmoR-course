@@ -3,7 +3,7 @@ title: "Getting the most out of R"
 subtitle: "Physalia Courses"  
 author: 
   - "Luis D. Verde Arregoitia"
-date: 'February 2021'
+date: 'February 2022'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -453,7 +453,7 @@ an object that represents an action that can be performed by R. .b[Expressions c
 
 ```{r}
 my_custom_function <- function(my_arg){
-  x+1 # statement
+  my_arg+1 # statement
 }
 
 my_vector <- c(3,5,6,7)
@@ -853,7 +853,7 @@ class: inverse
 
 # Mapping w/ two inputs
 
-.center.f2[`map2(.x, .y., .f)`]
+.center.f2[`map2(.x, .y, .f)`]
 
 .f3[Both input lists or vectors are passed to function .b[.f]]
 

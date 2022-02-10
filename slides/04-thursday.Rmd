@@ -3,7 +3,7 @@ title: "Getting the most out of R"
 subtitle: "Physalia Courses"  
 author: 
   - "Luis D. Verde Arregoitia"
-date: 'February 2021'
+date: 'February 2022'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -82,10 +82,13 @@ box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
 
 ```
 
-## Thursday - Overcoming errors and getting unstuck
+## Thursday  
 
+Useful addins and helpers
 
-- Friendly online resources
+### Overcoming errors and getting unstuck
+
+- Where can we get help online
 
 - Building web searches to solve common problems
 
@@ -95,7 +98,6 @@ box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
 
 ---
 
----
 class: dk-section-title
 background-image:url("imgs/brigalow.jpg")
 background-size: cover
@@ -104,47 +106,315 @@ background-size: cover
 
 ---
 
-- styler
-- annotater
-- littleboxes
-- packup
-- datapasta
-- regexplain
-- code sections
-- multiple cursors
-- shortcuts
+### Tools for nicer scripts
 
-https://bookdown.org/content/d1e53ac9-28ce-472f-bc2c-f499f18264a3/code.html
----
+.f3.b.red[`styler`] https://styler.r-lib.org/   
 
-- Friendly online resources
+Formats code according to a style guide (e.g. the [tidyverse style guide](https://style.tidyverse.org/index.html))  
 
-StackOverflow
-Twitter
-github issues (closed and open)
-RStudio Community
-
-
----
- Getting help
- 
----
-
-Etiquette
-
-
----
-.center[
-<blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">If you are looking for help with an <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> problem, I recommend that you<br>🎯do *not* email an individual author or OSS maintainer<br>🎯create a reprex demonstrating your problem (naturally none in this email)<br>🎯post on a public forum like RStudio Community or Stack Overflow</p>&mdash; Julia Silge (@juliasilge) <a href="https://twitter.com/juliasilge/status/1477778836968259587?ref_src=twsrc%5Etfw">January 2, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+.pull-left[
+```{r, eval=FALSE}
+# Good
+height <- (feet * 12) + inches
+mean(x, na.rm = TRUE)
+```
+]
+.pull-right[
+```{r, eval=FALSE}
+# Bad
+height<-feet*12+inches
+mean(x, na.rm=TRUE)
+```
 ]
 
---- 
- Reproducible examples
- 
- 
+.tr[
+Vikram Singh Rawat (2021)  
+[Best Coding Practices for R](https://bookdown.org/content/d1e53ac9-28ce-472f-bc2c-f499f18264a3/code.html)
+]
+
 ---
-- Building web searches to solve common problems
 
-- Identifying the best solutions
+.f3.b.red[`annotater`] https://annotater.liomys.mx
 
-- Creating reproducible examples with the 📦 {`reprex`} package 
+Add useful annotations about the packages we are using in our scripts
+
+Package versions and source
+```{r, eval=FALSE}
+library(dplyr)   # CRAN v1.0.7
+library(janitor) # CRAN v2.1.0
+```
+Package titles and version
+```{r, eval=FALSE}
+library(readr) # Read Rectangular Text Data, CRAN v2.0.2
+```
+
+* _Can also annotate which pacakge functions are used in a script_
+
+---
+
+.f3.b.red[`littleboxes`]  
+  https://github.com/ThinkR-open/littleboxes
+
+Create boxed titles in a script
+
+```{r, eval=FALSE}
+
+##%##################################################%##
+#                                                      #
+####    My analysis script. Luis, Feb 2022          ####
+#                                                      #
+##%##################################################%##
+
+```
+
+---
+
+.f2.b.red[`packup`]  
+https://github.com/MilesMcBain/packup
+
+Move library calls up to the top of the script, remove any duplicates, and sort them alphabetically
+
+.pull-left[
+```{r,eval=FALSE}
+data("starbucks")
+# create vectors 
+library(purrr)
+fat <- starbucks$fat
+carb <- starbucks$carb
+library(purrr)
+library(openintro)
+```
+]
+.pull-right[
+```{r,eval=FALSE}
+library(openintro)
+library(purrr)
+data("starbucks")
+# create vectors 
+fat <- starbucks$fat
+carb <- starbucks$carb
+```
+]
+
+---
+
+## Code sections and the navigation pane
+
+```{r, eval=FALSE}
+# My code section ------------------------------------ 
+```
+
+Split a script into discrete pieces
+
+Code sections can be folded, and work with the navigation panel in the source editor
+
+.f3[
+- Built automatically for any comment with four trailing dashes
+- Insert with `ctrl` + `shift` + `R`
+]
+
+---
+
+### Cool utilities
+
+.f3.b.red[`datapasta`]  - https://milesmcbain.github.io/datapasta/  
+.f3[Copying and pasting data to and from R]
+.center[
+<img src="imgs/tribble_paste.gif" width="48%"/>    
+]
+
+---
+
+### Coding efficiently
+
+.center[Ctrl == ⌘ Command  &&  Alt == ⌥ Option]
+
+- multiple cursors (`ctrl`+`alt`+`up`) or (`ctrl`+`alt`+`down`)
+  - dismiss with `escape`
+
+- shortcuts
+  - display shortcut panel (`alt`+`shift`+`k`)
+  - insert pipe (`ctrl`+`shift`+`m`)
+  - insert assignment operator (`alt`+`-`)
+  - drag lines (`alt`+`up`) or (`alt`+`down`)
+  - run current line (`ctrl`+`enter`)
+
+.tr[
+[RStudio Shortcuts and Tips (2021)](https://appsilon.com/rstudio-shortcuts-and-tips/)
+]
+
+---
+
+### Coding efficiently
+
+- Move focus between panes
+  - (`ctrl`+`1` through `8`)
+  - Maximize panes with (`ctrl`+`shift`+`1` through `8`)
+
+.center[
+<img src="imgs/movingfocus.gif" width="48%"/>    
+]
+
+---
+
+### Coding efficiently
+
+.f3[
+Rename in scope  
+.orange[`ctrl`+`alt`+`shift`+`m`]
+
+Accessing documentation
+.orange[`?`  
+`F1`]
+
+Opening objects in Viewer pane  
+
+.orange[`ctrl` + click]
+]
+
+---
+class: dk-section-title
+background-image:url("imgs/idal.jpg")
+background-size: cover
+
+# Getting unstuck and getting help
+
+---
+
+class: inverse
+
+# Practice
+
+.f2.white[
+Let's revisit the bonus challenge from Day 3 (NBA teams) and solve the error
+]
+
+---
+
+### Getting unstuck
+
+.f2.b.dark-blue[
+1- Reset
+]
+Restart R (clear the search path, detach, reset options)
+.f2.b.dark-blue[
+2 - Reprex
+]
+Minimum reproducible examples that reveal, confirm, or eliminate a problem
+
+
+.tr[
+Jenny Bryan (2020)  
+[Object of type ‘closure’ is not subsettable](https://www.rstudio.com/resources/rstudioconf-2020/object-of-type-closure-is-not-subsettable/)
+]
+
+---
+
+## Getting unstuck
+
+.f3[Be mindful of the most common mistakes]
+- packages not loaded
+- operator mixups
+- extra or missing commas or brackets
+- steps out of order
+
+.f3[Familiarize yourself with error messages]
+
+.f3[Look at examples and documentation]
+
+.tr[
+Emily Jennings-Dobbs (2021)  
+[Common Errors in R](https://jtr13.github.io/cc21/common-errors-in-r.html)
+]
+
+---
+
+# Getting help
+
+.f3[
+Another human  
+[RStudio Community](https://community.rstudio.com/)    
+Local RLadies or R user groups   
+[StackOverflow](https://stackoverflow.com/)  
+Twitter  
+[GitHub](https://github.com/) issues (closed and open)  
+GitHub repositories  
+]
+
+---
+
+class: inverse, center, middle
+.f1[🧐Etiquette!]
+
+
+---
+
+<blockquote class="twitter-tweet tw-align-center" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">If you are looking for help with an <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> problem, I recommend that you<br>🎯do *not* email an individual author or OSS maintainer<br>🎯create a reprex demonstrating your problem (naturally none in this email)<br>🎯post on a public forum like RStudio Community or Stack Overflow</p>&mdash; Julia Silge (@juliasilge) <a href="https://twitter.com/juliasilge/status/1477778836968259587?ref_src=twsrc%5Etfw">January 2, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+---
+--- 
+
+<blockquote class="twitter-tweet tw-align-center" data-dnt="true"><p lang="en" dir="ltr">Dear person I don&#39;t know who emailed me this morning, the <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> community are often really generous with their time, but emailing someone you don&#39;t know a data file, telling them that the code in their blog doesn&#39;t produce the plot you want, and asking them to fix your plot ...</p>&mdash; A/Prof Jenny Richmond (@JenRichmondPhD) <a href="https://twitter.com/JenRichmondPhD/status/1491547956763402240?ref_src=twsrc%5Etfw">February 9, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+---
+
+# Reproducible examples
+ 
+.f3[
+Can we reproduce our error on a small, concrete example?
+] 
+ 
+.f2[the 📦 {`reprex`} package]
+https://reprex.tidyverse.org/
+
+- copy code to the clipboard
+- call `reprex()`
+- your example is ready for pasting into your desired venue
+---
+
+## Web searches to solve common problems
+
+Even advanced developers rely on documentation and web searches
+
+.f3[
+- Learn ["Google-fu"](https://tryhackme.com/resources/blog/google-fu) to build more advanced web searches
+
+- Be aware of the general terminology and jargon
+.center[_R subset rows partial match_]
+- Make searches general (remove the parts of your error message that only you see)
+.center.code.red[Error: object 'otters197_b_new' not found]
+]
+---
+
+## Identifying ~~the best~~ useful solutions
+
+.f3[
+- Do we need to restrict our results temporally?
+
+- Dialect-specific solutions  
+[Sort (order) data frame rows by multiple columns](https://stackoverflow.com/questions/1296646/sort-order-data-frame-rows-by-multiple-columns)  
+(Asked on StackOverflow in 2009, 1.3 M visits)
+
+- Keep track of helpful users
+]
+
+---
+
+# Thanks!
+
+.pull-left[
+
+.center[
+<img src="imgs/luisconmila.jpg" width="40%"/>  
+]
+[`r fa(name = "twitter")` @LuisDVerde](https://twitter.com/LuisDVerde)  
+[`r fa(name = "github")` @LuisDVA](https://github.com/luisdva)  
+[`r fa(name = "link")` liomys.mx](https://liomys.mx)  
+[`r fa(name = "paper-plane")` luis@liomys.mx](mailto:luis@liomys.mx)
+]
+
+Slides created via the R packages:
+
+[**xaringan**](https://github.com/yihui/xaringan)<br>
+[gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
+
