@@ -85,3 +85,6 @@ All slides are available as downloadable html slide decks (go to each link, righ
 - Statistical analyses
 - Package development
 - RMarkdown
+
+***
+Contact me if you are interested in hosting a similar version of this course for your team or institution.
